@@ -5,8 +5,10 @@ import DOMPurify from "dompurify";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/pagination";
-import { Pagination } from "swiper/modules";
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import QuestionMarkIcon from "@mui/icons-material/QuestionMark";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
@@ -137,15 +139,18 @@ const FindCard = ({ searchResult, isLoading, resort }) => {
                   key={index}
                   className="border-2 border-primary mb-20 cursor-pointer"
                 >
+                  { /* Carrosol Slider */ }
                   <div className="md:flex gap-5">
-                    <div>
+                    {/* <div>
                       <Swiper
                         className="md:w-[384px] w-full "
-                        spaceBetween={30}
-                        pagination={{
-                          clickable: true,
-                        }}
-                        modules={[Pagination]}
+                        modules={[Navigation, Pagination, Scrollbar, A11y]}
+                            spaceBetween={30}
+                            navigation
+                            pagination={{ clickable: true }}
+                            scrollbar={{ draggable: true }}
+                            onSwiper={(swiper) => console.log(swiper)}
+                            onSlideChange={() => console.log('slide change')}
                       >
                         <SwiperSlide key={index}>
                           <div className="">
@@ -186,7 +191,75 @@ const FindCard = ({ searchResult, isLoading, resort }) => {
                               </SwiperSlide>
                             ))}
                       </Swiper>
+                    </div> */}
+                     <div>
+                     <Swiper
+                                className="md:w-[384px] w-full "
+                                modules={[Navigation, Pagination, Scrollbar, A11y]}
+                                spaceBetween={30}
+                                navigation={{ 
+                                  nextEl: '.swiper-button-next',
+                                  prevEl: '.swiper-button-prev',
+                                  onClick: (e) => e.stopPropagation()
+                                }}
+                                pagination={{ clickable: true }}
+                                scrollbar={{ draggable: true }}
+                                onSwiper={(swiper) => console.log(swiper)}
+                                onSlideChange={() => console.log('slide change')}
+                              >
+                                <div className="swiper-button-next" onClick={(e) => e.stopPropagation()}></div>
+                                <div className="swiper-button-prev" onClick={(e) => e.stopPropagation()}></div>
+
+                                <SwiperSlide key={index}>
+                                  <div className="">
+                                    <div className="aspect-[3/2] w-full">
+                                      <img
+                                        className="w-full h-full object-cover"
+                                        src={item?.featuredImage || item?.featureImage}
+                                        alt="carousalImages"
+                                      />
+                                    </div>
+                                  </div>
+                                </SwiperSlide>
+
+                                {item?.carousal
+                                  ? item?.carousal.map((img, index) => (
+                                      <SwiperSlide key={index}>
+                                        <div className="">
+                                          <div className="aspect-[3/2] w-full">
+                                            <img
+                                              className="w-full h-full object-cover"
+                                              src={img}
+                                              alt="carousalImages"
+                                            />
+                                          </div>
+                                        </div>
+                                      </SwiperSlide>
+                                    ))
+                                  : item?.carousalImages?.map((img, index) => (
+                                      <SwiperSlide key={index}>
+                                        <div>
+                                          <div className="aspect-[3/2] w-full">
+                                            <img
+                                              className="w-full h-full object-cover"
+                                              src={img}
+                                              alt="carousalImages"
+                                            />
+                                          </div>
+                                        </div>
+                                      </SwiperSlide>
+                                    ))}
+                              </Swiper>
+
                     </div>
+ 
+
+
+                              
+
+
+
+
                     <div
                       className={` px-5 ${
                         searchValues?.tabValue !== "Resorts" &&
