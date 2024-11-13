@@ -116,7 +116,7 @@ const BookingModal = ({
               Interested in this trip?
             </Typography>
             <div className="mt-2">
-              <p className="text-lg font-semibold">Let us know your name</p>
+              <p className="text-lg font-semibold">Let us know your name :</p>
               <input
                 type="text"
                 name="name"
@@ -125,11 +125,11 @@ const BookingModal = ({
               />
             </div>
             <div className="mt-2">
-              <p className="text-lg font-semibold"> Phone number</p>
+              <p className="text-lg font-semibold"> Phone number :</p>
               <input type="text" name="phone" className="w-full rounded-md" />
             </div>
             <div className="mt-2">
-              <p className="text-lg font-semibold">Email</p>
+              <p className="text-lg font-semibold">Email :</p>
               <input
                 type="email"
                 name="email"
@@ -138,7 +138,7 @@ const BookingModal = ({
               />
             </div>
             <div className="mt-2">
-              <p className="text-lg font-semibold">WhatsApp contact number</p>
+              <p className="text-lg font-semibold">WhatsApp contact number :</p>
               <input
                 type="text"
                 name="whatsapp"
@@ -146,7 +146,7 @@ const BookingModal = ({
               />
             </div>
             <div className="mt-2">
-              <p className="text-lg font-semibold">Number of guests</p>
+              <p className="text-lg font-semibold">Number of guests :</p>
               <input
                 type="text"
                 name="numberOfGuest"

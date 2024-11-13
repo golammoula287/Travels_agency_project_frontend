@@ -11,7 +11,7 @@ function Exclusions({ propertyData }) {
           <div className="flex gap-1 items-center ">
             <img className="w-10" src="/ea2.svg" alt="" />
             <h1 className="sm:text-[48px] text-title2 font-outfit font-light    text-primary ">
-              Trip Inclusions
+              Inclusions
             </h1>
           </div>
 
@@ -31,7 +31,7 @@ function Exclusions({ propertyData }) {
           <div className="flex  gap-1 items-center ">
             <img className="w-10" src="/ea1.svg" alt="" />
             <h1 className="sm:text-[48px] text-title2 font-outfit font-light  text-primary ">
-              Trip Exclusions
+              Exclusions
             </h1>
           </div>
 

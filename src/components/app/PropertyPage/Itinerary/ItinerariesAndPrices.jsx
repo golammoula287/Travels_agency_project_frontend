@@ -323,7 +323,7 @@ function ItinerariesAndPrices({ propertyData }) {
                               : "text-[#09aafe]"
                           }   font-bold`}
                         >
-                          ({schedule?.itinerary?.numberOfDays} Days /{" "}
+                          ({schedule?.itinerary?.numberOfDays} Days |{" "}
                           {schedule?.itinerary?.numberOfNights} Nights)
                         </div>
                         <span

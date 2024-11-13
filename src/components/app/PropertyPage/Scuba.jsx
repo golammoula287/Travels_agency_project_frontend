@@ -29,7 +29,7 @@ const Content = ({ title, description }) => (
       <h1 className="sm:text-title  text-title2 text-[#0080FF]  font-light  font-outfit">
         {title}
       </h1>
-      <p className="text-[16px] sm:mt-[27px] mt-[23px] sm:text-subtitle  font-roboto font-normal text-secondary ">
+      <p className="text-secondary sm:text-subtitle text-subtitle3 font-roboto font-light sm:mt-[30px] mt-[25px]">
         <span
           dangerouslySetInnerHTML={{
             __html: DOMPurify.sanitize(description),

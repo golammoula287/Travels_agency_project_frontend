@@ -104,7 +104,7 @@ function ResortAndPrice({ propertyData }) {
                   <div className="w-full">
                     <div className=" md:text-4xl items-end font-[400] flex flex-wrap gap-2 md:gap-8">
                       <div className="inline-block font-roboto font-bold leading-[22px] text-[20px] ">
-                        ({item?.numberOfDay} Days / {item?.numberOfNight}{" "}
+                        ({item?.numberOfDay} Days | {item?.numberOfNight}{" "}
                         Nights)
                       </div>
                       <span className="inline-block font-roboto text-[#09aafe]  leading-[22px] text-[20px]  font-bold">

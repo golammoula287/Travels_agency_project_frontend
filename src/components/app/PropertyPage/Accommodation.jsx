@@ -65,7 +65,7 @@ const Accommodation = ({ propertyData, resort }) => {
             <h1 className=" sm:text-title text-title2 -mt-2  text-primary   md:font-light  font-outfit">
               Accommodation
             </h1>
-            <p className="text-[16px] md:text-subtitle font-normal sm:pt-[30px]  pt-[25px] font-roboto  text-secondary    ">
+            <p className="text-secondary sm:text-subtitle text-subtitle3 font-roboto font-light sm:mt-[30px] mt-[25px]">
               <span
                 dangerouslySetInnerHTML={{
                   __html: DOMPurify.sanitize(

@@ -58,7 +58,7 @@ function SliderModal({
           </div>
           <div className="my-4  flex justify-center w-full ">
             <img
-              className=" md:w-[550px] w-72   rounded-md"
+              className=" md:w-[550px]  w-72  rounded-md"
               src={selectedImage}
             />
           </div>
@@ -93,7 +93,7 @@ function SliderModal({
                   onClick={() => openHandler(image)}
                   key={`other-${index}`}
                 >
-                  <div className="aspect-w-3 aspect-h-2">
+                  <div className="aspect-w-3 aspect-h-2 ">
                     <img
                       className="h-full w-full cursor-pointer object-cover"
                       src={image}
@@ -125,3 +125,6 @@ function SliderModal({
 }
 
 export default SliderModal;
+
+
+
