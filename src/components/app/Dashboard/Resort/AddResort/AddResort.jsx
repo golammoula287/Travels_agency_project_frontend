@@ -30,7 +30,7 @@ const AddResort = () => {
   return (
     <div>
       <h1 className="text-2xl text-center mt-5 text-black font-bold">
-        Add A New Resort
+        Add a New Resort
       </h1>
       <div className="max-w-screen-xl mx-auto mt-10">
         <Box sx={{ width: "100%" }}>

@@ -43,7 +43,7 @@ const FoodOnBoard = ({
       {/* divingTitle picture */}
       <form onSubmit={goToNextStep}>
         <div className="my-4">
-          <h4 className="block mb-2 text-xl font-medium text-gray-900">
+          <h4 className="block mb-2 text-xl font-normal text-gray-900">
             Image of plant-based food onboard{" "}
             <span className="font-normal">
               (Please upload 3:2 sized images or it will be automatically

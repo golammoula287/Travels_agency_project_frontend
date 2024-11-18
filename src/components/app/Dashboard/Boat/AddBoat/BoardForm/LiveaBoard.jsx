@@ -31,11 +31,10 @@ const LiveaBoard = ({
       {/* divingTitle picture */}
       <form onSubmit={goToNextStep}>
         <div className="my-4">
-          <h4 className="block mb-2 text-xl font-medium text-gray-900">
+          <h4 className="block mb-2 text-xl font-normal text-gray-900">
             Boat Image{" "}
             <span className="font-normal">
-              (Please upload 3:2 sized images or it will be automatically
-              cropped)
+            (Please upload 2:3 ratio images; otherwise, they will be automatically cropped)
             </span>
           </h4>
 
@@ -72,7 +71,7 @@ const LiveaBoard = ({
             className="block text-gray-700 text-xl mb-2"
             htmlFor="divingDesc"
           >
-            Boat description
+            Boat Description
           </label>
           <ReactQuill
             className="shadow h-40 appearance-none border w-full py-2 px-3 rounded-md text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -120,3 +119,7 @@ const LiveaBoard = ({
 };
 
 export default LiveaBoard;
+
+
+
+

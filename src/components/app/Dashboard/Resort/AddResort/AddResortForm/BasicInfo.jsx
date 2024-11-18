@@ -264,12 +264,11 @@ const BasicInfo = ({
         {/* Add your feature image input here */}
 
         <div className="my-4">
-          <h4 className="block mb-2 text-xl font-medium text-gray-900">
+          <h4 className="block mb-2 text-xl font-Medium text-gray-900">
             {" "}
             Feature Image{" "}
             <span className="font-normal">
-              (Please upload 3:2 sized images or it will be automatically
-              cropped)
+            (Please upload 2:3 ratio images; otherwise, they will be automatically cropped)
             </span>
           </h4>
           <label className=" flex gap-4 w-full items-center px-4 py-2 bg-white text-blue rounded-lg border  tracking-wide uppercase  cursor-pointer ">
@@ -299,7 +298,7 @@ const BasicInfo = ({
         </div>
 
         <div className="mb-4">
-          <h2 className="my-4 text-xl pb-2 border-b-2">Carousal images</h2>
+          <h2 className="my-4 text-xl pb-2 border-b-2">Carousel Images</h2>
 
           <div>
             <div {...getRootProps()} style={dropzoneStyles}>
@@ -349,7 +348,8 @@ const BasicInfo = ({
           </div>
         </div>
         <div className="my-4">
-          <h2 className="mt-10 mb-4 text-2xl ">Period of Closure</h2>
+          <h2 className="mt-10 mb-4 text-2xl font-normal ">Period of Closure ( Please enter the date range for any period the property is closed)
+          </h2>
 
           {/* <LocalizationProvider dateAdapter={AdapterDayjs}>
             <DateRangePicker
@@ -370,7 +370,7 @@ const BasicInfo = ({
           <div className="flex gap-6">
             <LocalizationProvider dateAdapter={AdapterDayjs}>
               <div>
-                <p className="mb-1">Start Date</p>
+                <p className="mb-1 text-xl font-normal ">Start Date</p>
                 <DatePicker
                   value={deactivitionDate.startDate}
                   onChange={(newDate) =>
@@ -382,7 +382,7 @@ const BasicInfo = ({
                 />
               </div>
               <div>
-                <p className="mb-1">End Date</p>
+                <p className="mb-1 text-xl font-normal ">End Date</p>
                 <DatePicker
                   value={deactivitionDate.endDate}
                   onChange={(newDate) =>
@@ -399,7 +399,7 @@ const BasicInfo = ({
         <div className="mb-4">
           <label
             htmlFor="propertyName"
-            className="block text-xl font-medium text-gray-700"
+            className="block text-xl font-normal text-gray-700"
           >
             Name of the Resort
           </label>
@@ -414,11 +414,11 @@ const BasicInfo = ({
           />
         </div>
         <div className="mb-4">
-          <h2 className="my-4 text-xl"> Discount </h2>
+          <h2 className="my-4 text-2xl font-normal"> Discount(Enter any percentage discount amount that will apply to packages) </h2>
 
           <label
             htmlFor="propertyName"
-            className="block text-sm font-medium text-gray-700"
+            className="block text-xl font-normal text-gray-700"
           >
             Percentage
           </label>
@@ -450,11 +450,12 @@ const BasicInfo = ({
             </LocalizationProvider>
           </div> */}
           <div>
-            <h2 className="mt-10 mb-4 text-2xl ">Discount time frame</h2>
+            <h2 className="mt-10 mb-4 text-2xl font-normal ">Discount Time Frame ( The time frame that above discount will be applied to)
+            </h2>
             <div className="flex gap-6">
               <LocalizationProvider dateAdapter={AdapterDayjs}>
                 <div>
-                  <p className="mb-1">Start Date</p>
+                  <p className="mb-1 text-xl font-normal ">Start Date</p>
                   <DatePicker
                     value={discountTimeFrameDate.startDate}
                     onChange={(newDate) =>
@@ -466,7 +467,7 @@ const BasicInfo = ({
                   />
                 </div>
                 <div>
-                  <p className="mb-1">End Date</p>
+                  <p className="mb-1 text-xl font-normal ">End Date</p>
                   <DatePicker
                     value={discountTimeFrameDate.endDate}
                     onChange={(newDate) =>
@@ -481,7 +482,7 @@ const BasicInfo = ({
             </div>
           </div>
           <div className="mt-6">
-            <p className="text-lg font-semibold">Resort daily schedule</p>
+            <p className="text-xl font-normal ">Resort Daily Schedule</p>
             <ReactQuill
               className="w-full h-28 rounded-md border"
               name="resortDailySchedule"

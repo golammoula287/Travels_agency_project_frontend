@@ -382,16 +382,50 @@ const FindCard = ({ searchResult, isLoading, resort }) => {
         <div className="xl:w-[25%]  -mt-10 lg:mt-10 xl:mt-0">
           <div className="lg:text-[32px] lg:hidden  block  md:text-3xl text-xl text-primary">
             How to Book
-            <QuestionMarkIcon
+            {/* <QuestionMarkIcon
               onMouseOver={handleOpen}
               className="animate-bounce"
               sx={{ cursor: "pointer" }}
-            />
+            /> */}
+            <div
+  onMouseOver={handleOpen}
+  style={{
+    display: "inline-flex",
+    justifyContent: "center",
+    alignItems: "center",
+    width: "20px",  // Size of the outer circle
+    height: "20px",
+    borderRadius: "50%",  // Makes the outer div a circle
+    border: "2px solid currentColor",  // Border color same as the icon color
+    cursor: "pointer",
+    marginLeft: "5px",
+    background:"currentColor"
+  }}
+>
+  <QuestionMarkIcon sx={{ fontSize: "14px", color: "white" }} />  {/* Icon size */}
+</div>
+
+
           </div>
 
           <div className="lg:text-[32px] md:text-3xl text-xl lg:block  hidden ">
             <span className="text-primary">How to Book</span>
-            <QuestionMarkIcon className="text-primary" />
+            <div
+                style={{
+                display: "inline-flex",
+                justifyContent: "center",
+                alignItems: "center",
+                width: "30px",  // Size of the outer circle
+                height: "30px",
+                borderRadius: "50%",  // Makes the outer div a circle  
+                cursor: "pointer",
+                marginLeft: "5px",
+               
+                border:"2px solid rgb(0, 128, 255) "
+              }}
+            >
+              <QuestionMarkIcon sx={{ fontSize: "25px", color: "rgb(0, 128, 255)" }} />  {/* Icon size */}
+            </div>
             <div className="pt-5 space-y-5">
               
               <div>
@@ -453,34 +487,33 @@ const FindCard = ({ searchResult, isLoading, resort }) => {
                 <RxCross2 className="text-2xl text-slate-800" />
               </button>
               <div className="pt-5 space-y-5">
-                <p className="text-gray text-subtitle font-outfit font-normal">
-                  Explore your options and discover the perfect, inclusive dive
-                  adventure.
-                </p>
-                <div>
-                  <ul className="list-disc space-y-2 text-gray">
+              <div>
+              <ul className="list-disc space-y-2 text-gray">
+                <li className="text-gray text-subtitle font-outfit font-normal">
+                Explore your options and discover the perfect, inclusive dive
+                adventure.
+                </li>
                     <li className=" text-subtitle font-outfit font-normal">
-                      Submit your booking or inquiry to us by clicking on ‘Book
-                      Now’.
+                    Submit your booking or inquiry to us by clicking on ‘Book
+                    Now’.
                     </li>{" "}
                     <li className=" text-subtitle font-outfit font-normal">
-                      We will check the most up-to-date availability and options
-                      for you and hold your reservation.
+                    We will check the most up-to-date availability and options
+                    for you and hold your reservation.
                     </li>{" "}
                     <li className=" text-subtitle font-outfit font-normal">
-                      Very shortly, we will contact you with your trip details,
-                      answer all your queries, and confirm everything.
+                    Very shortly, we will contact you with your trip details, answer all your queries and confirm with you.
                     </li>{" "}
                     <li className=" text-subtitle font-outfit font-normal">
-                      Next, we will review payment methods and other terms and
-                      conditions, and you will receive access to your diver’s
-                      hub account. Here, we can gather the necessary information
-                      to make your trip perfect.
+                    Next, we will review payment methods and other terms and
+                    conditions, and you will receive access to your diver’s hub
+                    account. Here, we can gather the necessary information to
+                    make your trip perfect.
                     </li>
                     <li className=" text-subtitle font-outfit font-normal">
-                      We will be available anytime to answer questions and
-                      discuss your diving thoughts with you; we have heard them
-                      all over our time, so don’t be shy!
+                    We will be available anytime to answer questions and discuss
+                    your diving thoughts with you; we have heard them all over
+                    our time, so don’t be shy!
                     </li>
                   </ul>
                 </div>

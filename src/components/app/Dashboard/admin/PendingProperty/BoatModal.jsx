@@ -124,7 +124,7 @@ const BoatModal = ({
                   </ul>
                 </div>
                 <div>
-                  <h2 className="font-semibold capitalize">inclusions</h2>
+                  <h2 className="font-semibold capitalize">Inclusions</h2>
                   <ul>
                     {boatData?.inclusions?.map((item, index) => (
                       <li key={index}>{item}</li>
@@ -132,7 +132,7 @@ const BoatModal = ({
                   </ul>
                 </div>
                 <div>
-                  <h2 className="font-semibold capitalize">exclusions</h2>
+                  <h2 className="font-semibold capitalize">Exclusions</h2>
                   <ul>
                     {boatData?.exclusions?.map((item, index) => (
                       <li key={index}>{item}</li>
@@ -148,7 +148,7 @@ const BoatModal = ({
                   </ul>
                 </div>
                 <div>
-                  <h2 className="font-semibold capitalize">diveCourses</h2>
+                  <h2 className="font-semibold capitalize">Dive Courses</h2>
                   <ul>
                     {boatData?.diveCourses?.map((item, index) => (
                       <li key={index}>{item}</li>
@@ -167,7 +167,7 @@ const BoatModal = ({
                         ) && (
                           <div className="my-4">
                             <h2>
-                              <strong className="mr-2">question:</strong>{" "}
+                              <strong className="mr-2">Question:</strong>{" "}
                               {item?.question}
                             </h2>
                             <p className="">
@@ -195,7 +195,7 @@ const BoatModal = ({
                         ) && (
                           <div className="my-4">
                             <h2>
-                              <strong className="mr-2">question:</strong>{" "}
+                              <strong className="mr-2">Question:</strong>{" "}
                               {item?.question}
                             </h2>
                             <p className="">
@@ -222,7 +222,8 @@ const BoatModal = ({
                   className="w-full"
                 /> */}
                     <div className="space-y-2">
-                      <p className="font-medium">Add veganRating</p>
+                      <p className="font-medium">Add a Vegan Rating
+                      </p>
 
                       <input
                         onChange={(e) => rattingNumberHandler(e)}

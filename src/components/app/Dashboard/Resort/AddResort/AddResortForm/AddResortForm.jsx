@@ -254,7 +254,7 @@ const AddResortForm = ({ increaseProgress, decreaseProgress }) => {
           Swal.fire({
             position: "top-center",
             icon: "success",
-            title: "Your resort added successfully",
+            title: "Your Resort Was Added Successfully",
             showConfirmButton: false,
             timer: 1500,
           });

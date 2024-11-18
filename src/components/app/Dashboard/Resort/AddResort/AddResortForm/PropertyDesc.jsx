@@ -28,14 +28,12 @@ const PropertyDesc = ({
   };
   return (
     <>
-      <h2 className="my-4 text-xl pb-2 border-b-2">
-        Brief description of the Resort
-      </h2>
+      
       <div className="my-4">
-        <h4 className="block mb-2 text-xl font-medium text-gray-900">
+        <h4 className="block mb-2 text-xl font-normal text-gray-900">
           Resort Image{" "}
           <span className="font-normal">
-            (Please upload 3:2 sized images or it will be automatically cropped)
+          (Please upload 2:3 ratio images; otherwise, they will be automatically cropped)
           </span>
         </h4>
         <label className=" flex gap-4 w-full items-center px-4 py-2 bg-white text-blue rounded-lg border  tracking-wide uppercase  cursor-pointer ">
@@ -69,7 +67,7 @@ const PropertyDesc = ({
             className="block text-gray-700 text-xl  mb-2"
             htmlFor="propertyDesc"
           >
-            Brief description
+           Brief Description of the Resort
           </label>
 
           <ReactQuill

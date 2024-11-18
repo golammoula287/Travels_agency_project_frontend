@@ -24,7 +24,7 @@ const SpecialOffer = () => {
                 onClick={onClickHandler}
                 title={label}
                 // className="absolute -bottom-10 lg:left-[20%] left-[10%] z-20 transform -translate-y-1/2 text-primary px-4 py-2 rounded "
-                className="absolute -bottom-10 lg:left-[40%] left-[15%] z-20 transform -translate-y-1/2 text-primary px-4 py-2 rounded "
+                className="absolute -bottom-10 lg:left-[40%] left-[15%] z-20 transform -translate-y-1/2 text-primary px-4 py-2 rounded sm:mt-10 sm:h-[435px] "
               >
                 {/* <KeyboardArrowLeftIcon sx={{ fontSize: "40px" }} />
                  */}
@@ -88,7 +88,7 @@ const SpecialOffer = () => {
                 <div className="lg:w-[65%] w-full px-5 lg:p-0  text-left  h-full   relative ">
                   <div className="">
                     <h1 className="text-gray mt-[45px]  pb-2 font-medium font-outfit  text-[20px] leading-[22px] lg:text-subtitle">
-                      Liveboard / Egypt
+                      Liveboard | Egypt
                     </h1>
                     <h2 className="  md:text-[28px] pb-2  text-[24px] leading-[24px] font-outfit font-light  text-primary">
                       Emperor Elite Liveaboard
@@ -138,7 +138,7 @@ const SpecialOffer = () => {
                   </div>
                 </div>
                 <div className="sm:mt-5 mt-3 bottom-0">
-                  <button className="button3 text-xl text-[#f1f2f2]">
+                  <button className="button3 text-xl  text-[#f1f2f2]">
                     Details
                   </button>
                 </div>
