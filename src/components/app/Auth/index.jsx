@@ -248,7 +248,7 @@ const Auth = () => {
                         onClick={() => {
                           setIsSingUp(true), setShowPass(false), reset();
                         }}
-                        className="font-semibold cursor-pointer"
+                        className="font-semibold cursor-pointer pl-2"
                       >
                         Sign Up
                       </span>

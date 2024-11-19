@@ -82,6 +82,82 @@ const AddResortForm = ({ increaseProgress, decreaseProgress }) => {
     }
   };
 
+  //Updated handleAccomodationImages Fuction 
+
+  // const handleAccommodationChange = async (field, file) => {
+  //   if (file && file instanceof File) {
+  //     // Check if file size exceeds 2MB
+  //     if (file.size > 2 * 1024 * 1024) {
+  //       return Swal.fire({
+  //         icon: "error",
+  //         title: "Oops...",
+  //         text: "Something went wrong!",
+  //         footer: "File size exceeds the limit (2MB). Please choose a smaller file.",
+  //       });
+  //     }
+  
+  //     // Compress and convert to base64 if the file is valid
+  //     const compressedBase64 = await compressAndConvertToBase64(file, 800, 600, 0.8);
+  //     setResortData((prevData) => ({
+  //       ...prevData,
+  //       accommodation: {
+  //         ...prevData.accommodation,
+  //         [field]: compressedBase64, // Store the compressed base64 string
+  //       },
+  //     }));
+  //   } else {
+  //     // If file is null (removing the image), set the field to null
+  //     setResortData((prevData) => ({
+  //       ...prevData,
+  //       accommodation: {
+  //         ...prevData.accommodation,
+  //         [field]: null, // Remove the image
+  //       },
+  //     }));
+  //   }
+  // };
+  
+
+//   const handleAccommodationChange = async (field, valueOrFile) => {
+//   if (valueOrFile instanceof File) {
+//     // Handle file uploads
+//     if (valueOrFile.size > 2 * 1024 * 1024) {
+//       return Swal.fire({
+//         icon: "error",
+//         title: "Oops...",
+//         text: "Something went wrong!",
+//         footer: "File size exceeds the limit (2MB). Please choose a smaller file.",
+//       });
+//     }
+
+//     // Compress and convert to base64
+//     const compressedBase64 = await compressAndConvertToBase64(valueOrFile, 800, 600, 0.8);
+//     setResortData((prevData) => ({
+//       ...prevData,
+//       accommodation: {
+//         ...prevData.accommodation,
+//         [field]: compressedBase64, // Update the specific field with the base64 string
+//       },
+//     }));
+//   } else {
+//     // Handle non-file updates (e.g., text fields)
+//     setResortData((prevData) => ({
+//       ...prevData,
+//       accommodation: {
+//         ...prevData.accommodation,
+//         [field]: valueOrFile, // Update the specific field with the value
+//       },
+//     }));
+//   }
+// };
+
+
+
+
+
+
+
+
   const handleDivingChange = async (event) => {
     const { name, value } = event.target;
     if (name === "image") {
@@ -119,6 +195,67 @@ const AddResortForm = ({ increaseProgress, decreaseProgress }) => {
       }));
     }
   };
+
+
+  // //Updated  handleDivingChange  Function 
+
+  // const handleDivingChange = async (event) => {
+  //   const { name, files, value } = event.target;
+  
+  //   // Check if the event target is a file input (image)
+  //   if (files) {
+  //     // If files are selected, handle the file change logic
+  //     const file = files[0];
+  
+  //     // Check if a file is selected
+  //     if (file) {
+  //       // Check if the file size exceeds 2MB
+  //       if (file.size > 2 * 1024 * 1024) {
+  //         return Swal.fire({
+  //           icon: "error",
+  //           title: "Oops...",
+  //           text: "Something went wrong!",
+  //           footer: "File size exceeds the limit (2MB). Please choose a smaller file.",
+  //         });
+  //       }
+  
+  //       // Compress and convert the image to base64 (we assume you have a `compressAndConvertToBase64` function)
+  //       const compressedBase64 = await compressAndConvertToBase64(file, 800, 600, 0.8);
+  
+  //       // Update state with the compressed base64 image
+  //       setResortData((prevState) => ({
+  //         ...prevState,
+  //         diving: {
+  //           ...prevState.diving,
+  //           [name]: compressedBase64,
+  //         },
+  //       }));
+  //     } else {
+  //       // If no file is selected (i.e., image is removed), update the state to null
+  //       setResortData((prevState) => ({
+  //         ...prevState,
+  //         diving: {
+  //           ...prevState.diving,
+  //           [name]: null,
+  //         },
+  //       }));
+  //     }
+  //   } else {
+  //     // If the event target is a text field (description), update the description state
+  //     setResortData((prevState) => ({
+  //       ...prevState,
+  //       diving: {
+  //         ...prevState.diving,
+  //         [name]: value.trim(), // Use `.trim()` to remove any extra whitespace
+  //       },
+  //     }));
+  //   }
+  // };
+  
+  
+  
+
+
   const handleFoodsChange = async (event) => {
     const { name, value } = event.target;
     if (name === "image") {
@@ -156,6 +293,57 @@ const AddResortForm = ({ increaseProgress, decreaseProgress }) => {
       }));
     }
   };
+
+
+  // Update  handleFoodsChange
+
+  // const handleFoodsChange = async (field, valueOrFile) => {
+  //   if (valueOrFile instanceof File) {
+  //     // Handle file uploads
+  //     if (valueOrFile.size > 2 * 1024 * 1024) {
+  //       return Swal.fire({
+  //         icon: "error",
+  //         title: "Oops...",
+  //         text: "File size exceeds the limit (2MB). Please choose a smaller file.",
+  //       });
+  //     }
+  
+  //     try {
+  //       // Compress and convert the file to base64
+  //       const compressedBase64 = await compressAndConvertToBase64(valueOrFile, 800, 600, 0.8);
+  //       setResortData((prevData) => ({
+  //         ...prevData,
+  //         food: {
+  //           ...prevData.food,
+  //           [field]: compressedBase64, // Update the specific field with the base64 string
+  //         },
+  //       }));
+  //     } catch (error) {
+  //       console.error("Error compressing the file:", error);
+  //       Swal.fire({
+  //         icon: "error",
+  //         title: "Oops...",
+  //         text: "Something went wrong while processing the file.",
+  //       });
+  //     }
+  //   } else {
+  //     // Handle non-file updates (e.g., description or other text fields)
+  //     setResortData((prevData) => ({
+  //       ...prevData,
+  //       food: {
+  //         ...prevData.food,
+  //         [field]: valueOrFile, // Update the specific field with the value
+  //       },
+  //     }));
+  //   }
+  // };
+  
+  
+  
+
+
+
+
 
   const handleRoomsChange = async (event) => {
     const { name, value } = event.target;
@@ -223,6 +411,30 @@ const AddResortForm = ({ increaseProgress, decreaseProgress }) => {
       setResortData(newValue);
     }
   };
+
+
+  // updated 
+
+//   const handleImageChanges = (field, file) => {
+//   // Check if the file is valid
+//   if (file && file instanceof File) {
+//     const reader = new FileReader();
+//     reader.onloadend = () => {
+//       setResortData((prevData) => ({
+//         ...prevData,
+//         [field]: reader.result, // Storing the file's URL (base64 string)
+//       }));
+//     };
+//     reader.readAsDataURL(file);
+//   } else {
+//     // If null (image removed), just set it to null
+//     setResortData((prevData) => ({
+//       ...prevData,
+//       [field]: null,
+//     }));
+//   }
+// };
+
 
   // console.log("form add", resortData);
 

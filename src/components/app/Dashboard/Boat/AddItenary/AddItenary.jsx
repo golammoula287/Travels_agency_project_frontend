@@ -360,9 +360,7 @@ const AddItenary = () => {
               })
             }
             theme="snow" // This is the default theme; you can customize it as needed
-            style={{
-              '--placeholder-font-size': '26px', // Customize this size
-            }}
+            
           />
         </div>
         {error && <p className="text-red-600 text-xl mb-3">{error}</p>}

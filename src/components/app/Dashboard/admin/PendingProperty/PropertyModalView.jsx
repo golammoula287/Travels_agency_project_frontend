@@ -305,7 +305,8 @@ const PropertyModalView = ({
                 className="w-full"
               /> */}
                     <div className="space-y-2">
-                      <p className="font-medium">Add veganRating</p>
+                      <p className="font-medium">Add a Vegan Rating
+                      </p>
 
                       <input
                         onChange={(e) => rattingNumberHandler(e)}

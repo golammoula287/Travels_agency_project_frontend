@@ -32,7 +32,7 @@ function LiveaboardDetails({ propertyData, resort }) {
           className="w-full h-full object-cover mt-1"
           src={
             resort
-              ? propertyData?.featureImage
+              ? propertyData?.briefImage
               : propertyData?.liveABoard?.Picture
           }
           alt="Ilike Liveaboard"

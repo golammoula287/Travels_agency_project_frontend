@@ -37,6 +37,7 @@ function Liveaboards({ propertyData }) {
             <img
               className="absolute inset-0 w-full h-full  "
               style={{ aspectRatio: "3 / 2" }}
+              // src={propertyData?.featuredImage || propertyData?.featureImage}
               src={propertyData?.featuredImage || propertyData?.featureImage}
               alt="Liveaboard"
             />
