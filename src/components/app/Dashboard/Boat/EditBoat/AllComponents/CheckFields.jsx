@@ -234,6 +234,8 @@ const CheckFields = ({
   return (
     <div>
       <h1 className="text-2xl text-center font-bold">Selection</h1>
+      <h2 className="my-4 text-xl pb-2 border-b-2">Facilities</h2>
+    
       <form>
         <div className="mb-4">
           {facilities?.map((facility) => (

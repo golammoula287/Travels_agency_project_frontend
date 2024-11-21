@@ -512,6 +512,8 @@
 // export default ItinerariesAndPrices;
 
 
+
+
 import React, { useContext, useEffect, useState } from "react";
 import CabinModal from "./CabinModal";
 import BookingModal from "./BookingModal";
@@ -591,15 +593,22 @@ function ItinerariesAndPrices({ propertyData }) {
   };
 
   React.useEffect(() => {
-    console.log(discount);
+   
+    console.log("Discount IS:", discount);
+    console.log("Schedule object:", schedule);
+    console.log("Schedule convertPrice:", schedule?.convertPrice);
     if (discount) {
+      
       const myPrice = Math.round(
         Number(schedule?.convertPrice) -
-          (Number(schedule?.convertPrice) * Number(discount)) / 100
+        (Number(schedule?.convertPrice) * Number(discount)) / 100
       );
+      
+
       setDiscountPrice(myPrice);
     } else {
-      setDiscountPrice(Number(schedule?.convertPrice));
+       setDiscountPrice(Number(schedule?.convertPrice));
+      
     }
   }, [selectItitany, discount, cabinId]);
 
@@ -841,25 +850,27 @@ function ItinerariesAndPrices({ propertyData }) {
                           {schedule?.itinerary?.numberOfNights} Nights)
                         </div>
                         <span
-  className={`inline-block ${
-    schedule._id === selectItitany ? "text-primary" : "text-[#09aafe]"
-  } font-roboto leading-[22px] text-[20px] font-bold sm:mt-0 mt-4 -mb-3 sm:mb-0`}
->
-  (from {" "}
-  {discountPrice ? (
-    <>
-      <span style={{ textDecoration: 'line-through', marginRight: '8px' }}>
-        ${Number(schedule?.convertPrice).toFixed(2)}
-      </span>
-      <span style={{ color: 'green' }}>
-        ${discountPrice.toFixed(2)} USD
-      </span>
-    </>
-  ) : (
-    <>${Number(schedule?.convertPrice).toFixed(2)} USD</>
-  )}
-  )
-</span>
+                          className={`inline-block ${
+                            schedule._id === selectItitany
+                              ? "text-primary"
+                              : "text-[#09aafe]"
+                          }  font-roboto  leading-[22px] text-[20px]  font-bold sm:mt-0 mt-4 -mb-3 sm:mb-0`}
+                        >
+                          {/* (from{" "}
+                          <>${Number(schedule?.cost).toFixed(2)}</> USD 
+                          <>${Number(schedule?.convertPrice).toFixed(2)}</> USD) */}
+
+(from{" "}
+  <span className="inline-block line-through font-semibold text-md">
+    ${Number(schedule?.cost).toFixed(2)}USD
+  </span>
+  {"   "}
+  <span className="inline-block">
+    ${Number(schedule?.convertPrice).toFixed(2)}
+  </span>{" "}
+  USD)
+
+                        </span>
                       </div>
                       <div className="mt-4">
                         <span
@@ -1033,4 +1044,7 @@ function ItinerariesAndPrices({ propertyData }) {
 }
 
 export default ItinerariesAndPrices;
+
+
+
 
