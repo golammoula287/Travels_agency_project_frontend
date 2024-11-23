@@ -15,6 +15,7 @@ import { useRouter } from "next/router";
 import EnvQAndA from "./BoardForm/EnvQAndA";
 import { useContext } from "react";
 import { userContext } from "@/src/storage/contextApi";
+
 const AddBoat = () => {
   const rotuer = useRouter();
   const { submitLoader, setSubmitLoader } = useContext(userContext);

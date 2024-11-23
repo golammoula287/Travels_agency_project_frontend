@@ -9,6 +9,8 @@ import Packages from "./Packages";
 import Resorts from "./Resorts";
 import Swal from "sweetalert2";
 import { baseUrl } from "@/src/config/serverConfig";
+import dynamic from "next/dynamic";
+
 
 // for tabs -----
 function CustomTabPanel(props) {
@@ -121,4 +123,5 @@ const Resort = () => {
   );
 };
 
-export default Resort;
+export default dynamic (() => Promise.resolve(Resort), {ssr: false})
+

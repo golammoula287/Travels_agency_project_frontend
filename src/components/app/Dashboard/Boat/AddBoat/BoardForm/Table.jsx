@@ -391,7 +391,8 @@ const BoardTable = ({
             </div>
             <div className="py-1">
               <h1 className="font-bold mt-2 text-xl border-b mb-2">
-              Special Offers
+              Special Offers ( If you have a discounted period at the property, you can add this to the special offers search function here)
+
               </h1>
               <FormControlLabel
                 control={

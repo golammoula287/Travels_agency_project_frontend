@@ -6,6 +6,7 @@ import Dashboard from "@/src/components/core/layout/Dashboard";
 import { useContext, useEffect } from "react";
 import { Toaster } from "react-hot-toast";
 import { CssBaseline } from "@mui/material";
+
 export default function App({ Component, pageProps }) {
   const router = useRouter();
   // console.log(router.pathname);

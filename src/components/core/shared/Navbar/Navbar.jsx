@@ -11,6 +11,7 @@ import UseBasicModal from "../../UI/Modal/UseBasicModal";
 import SignUpModal from "./SignUpModal";
 import ContactUsModal from "./ContactUsModal";
 
+
 const MyNavbar = () => {
   const { user, setControl, control } = useContext(userContext);
   const router = useRouter();

@@ -217,7 +217,7 @@ const BasicInfo = ({
           )}
         </div>
         <div className="mb-4">
-          <h2 className="my-4 text-xl pb-2 border-b-2">Carousal images</h2>
+          <h2 className="my-4 text-xl pb-2 border-b-2">Carousel Images</h2>
 
           <div>
             <div {...getRootProps()} style={dropzoneStyles}>
@@ -231,7 +231,7 @@ const BasicInfo = ({
 
             {resortData?.carousalImages?.length > 0 && (
               <div>
-                <h4>Uploaded Carusel Images:</h4>
+                <h4>Uploaded Carousel Images:</h4>
                 <div className="grid grid-cols-5 gap-x-4 space-y-4 mt-4">
                   {resortData?.carousalImages.map((image, index) => (
                     <div key={index} className="relative w-full h-[200px]">

@@ -140,7 +140,7 @@ const BoatModal = ({
                   </ul>
                 </div>
                 <div>
-                  <h2 className="font-semibold capitalize">equipments</h2>
+                  <h2 className="font-semibold capitalize">Equipment</h2>
                   <ul>
                     {boatData?.equipment?.map((item, index) => (
                       <li key={index}>{item}</li>

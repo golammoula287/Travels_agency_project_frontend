@@ -229,7 +229,7 @@ const BasicInfo = ({
           </div>
           <div className="mb-4">
             <h2 className="my-4 text-xl pb-2 border-b-2">
-              Add Carousal Images
+              Add Carousel Images
             </h2>
 
             <div>

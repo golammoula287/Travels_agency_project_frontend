@@ -13,7 +13,7 @@ const LiveaBoard = ({ boatData, setBoatData, handleBoatDataChange }) => {
             className="block mb-2 text-xl font-medium text-gray-900"
             for="divingImage"
           >
-            LiveaBoard Image
+            Liveaboard Image
           </label>
           <input
             className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50  focus:outline-none  "
@@ -37,7 +37,7 @@ const LiveaBoard = ({ boatData, setBoatData, handleBoatDataChange }) => {
             className="block text-gray-700 text-xl  mb-2"
             htmlFor="divingDesc"
           >
-            LiveaBoard Description
+            Liveaboard Description
           </label>
           <ReactQuill
             id="divingDesc"

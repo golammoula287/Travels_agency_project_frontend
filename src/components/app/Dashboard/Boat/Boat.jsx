@@ -9,6 +9,9 @@ import Itineraries from "./Itineraries";
 import Boats from "./Boats";
 import Swal from "sweetalert2";
 import { baseUrl } from "@/src/config/serverConfig";
+import dynamic from "next/dynamic";
+
+
 // import { userContext } from "@/src/storage/contextApi";
 // import Spinner from "../../../core/shared/Loader/Spinner";
 
@@ -131,4 +134,5 @@ const Boat = () => {
   );
 };
 
-export default Boat;
+export default dynamic (() => Promise.resolve(Boat), {ssr: false})
+

@@ -284,7 +284,7 @@ const CheckFields = ({
           ))}
         </div>
         <div className="mb-4">
-          <h2 className="my-4 text-xl pb-2 border-b-2">Equipments</h2>
+          <h2 className="my-4 text-xl pb-2 border-b-2">Equipment</h2>
           {equipments?.map((equipments) => (
             <label key={equipments?._id} className="flex gap-x-2 items-center">
               <input
@@ -299,7 +299,7 @@ const CheckFields = ({
           ))}
         </div>
         <div className="mb-4">
-          <h2 className="my-4 text-xl pb-2 border-b-2">Boat on Dive</h2>
+          <h2 className="my-4 text-xl pb-2 border-b-2">Dive Courses Onboard</h2>
           {diveCourses?.map((diveCourse) => (
             <label key={diveCourse?._id} className="flex gap-x-2 items-center">
               <input

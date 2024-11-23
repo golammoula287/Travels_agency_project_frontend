@@ -101,7 +101,7 @@ const PropertyModalView = ({
               //   router.push(`/secondPage/${resortData?._id}`, "_blank")
               // }
               onClick={() =>
-                window.open(`/search/resort/${resortData?._id}`, "_blank")
+                window.open(`/search//${resortData?._id}`, "_blank")
               }
               className="text-2xl w-full  py-5 font-semibold underline cursor-pointer "
             >
@@ -141,7 +141,7 @@ const PropertyModalView = ({
                 </ul>
               </div>
               <div>
-                <h2 className="font-semibold capitalize">inclusions</h2>
+                <h2 className="font-semibold capitalize">Inclusions</h2>
                 <ul>
                   {resortData?.inclusions?.map((item, index) => (
                     <li key={index}>{item}</li>
@@ -149,7 +149,7 @@ const PropertyModalView = ({
                 </ul>
               </div>
               <div>
-                <h2 className="font-semibold capitalize">exclusions</h2>
+                <h2 className="font-semibold capitalize">Exclusions</h2>
                 <ul>
                   {resortData?.exclusions?.map((item, index) => (
                     <li key={index}>{item}</li>
@@ -157,7 +157,7 @@ const PropertyModalView = ({
                 </ul>
               </div>
               <div>
-                <h2 className="font-semibold capitalize">equipments</h2>
+                <h2 className="font-semibold capitalize">Equipment</h2>
                 <ul>
                   {resortData?.equipment?.map((item, index) => (
                     <li key={index}>{item}</li>
@@ -165,7 +165,7 @@ const PropertyModalView = ({
                 </ul>
               </div>
               <div>
-                <h2 className="font-semibold capitalize">diveCourses</h2>
+                <h2 className="font-semibold capitalize">DiveCourses</h2>
                 <ul>
                   {resortData?.diveCourses?.map((item, index) => (
                     <li key={index}>{item}</li>
@@ -184,7 +184,7 @@ const PropertyModalView = ({
                       ) && (
                         <div className="my-4">
                           <h2>
-                            <strong className="mr-2">question:</strong>{" "}
+                            <strong className="mr-2">Question:</strong>{" "}
                             {item?.question}
                           </h2>
                           <p className="">
@@ -212,7 +212,7 @@ const PropertyModalView = ({
                       ) && (
                         <div className="my-4">
                           <h2>
-                            <strong className="mr-2">question:</strong>{" "}
+                            <strong className="mr-2">Question:</strong>{" "}
                             {item?.question}
                           </h2>
                           <p className="">

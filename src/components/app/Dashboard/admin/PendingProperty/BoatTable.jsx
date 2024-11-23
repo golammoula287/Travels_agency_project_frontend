@@ -92,8 +92,8 @@ const BoatTable = () => {
               <tr className="text-center">
                 <th className="py-2 px-1 border-b"> NAME</th>
 
-                <th className="py-2 px-1 border-b">Status</th>
-                <th className="py-2 px-1 border-b">action</th>
+                <th className="py-2 px-1 border-b">STATUS</th>
+                <th className="py-2 px-1 border-b">ACTION</th>
               </tr>
             </thead>
             <tbody>
