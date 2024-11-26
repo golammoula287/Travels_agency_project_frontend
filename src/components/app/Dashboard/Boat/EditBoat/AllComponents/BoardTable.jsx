@@ -105,11 +105,27 @@ const BoardTable = ({ boatData, setBoatData }) => {
   };
   const handleUpdateModalClose = () => setUpdateModalOpen(false);
 
-  //
-  const handleUpdatedDateChange = (newValue) => {
-    setUpdatedStartTrip(newValue[0]);
-    setUpdatedEndTrip(newValue[1]);
+  
+  // const handleUpdatedDateChange = (newValue) => {
+  //   setUpdatedStartTrip(newValue[0]);
+  //   setUpdatedEndTrip(newValue[1]);
+  // };
+
+
+  // Updated handleUpdatedDateChange Function
+  
+
+  const handleUpdatedDateChange = (field, newDate) => {
+    if (field === "tripStart") {
+      setUpdatedStartTrip(newDate);
+    } else if (field === "tripEnd") {
+      setUpdatedEndTrip(newDate);
+    }
   };
+  
+  
+
+  
 
   const handleUpdateScheduleRow = () => {
     // Clone the boatData object
@@ -457,7 +473,7 @@ const BoardTable = ({ boatData, setBoatData }) => {
             aria-describedby="modal-modal-description"
           >
             <Box sx={style}>
-              <div>
+              {/* <div>
                 <h1 className="font-bold text-xl border-b mb-2 pb-2">
                   Trip Start and End Dates 
                 </h1>
@@ -478,7 +494,34 @@ const BoardTable = ({ boatData, setBoatData }) => {
                     )}
                   />
                 </LocalizationProvider>
-              </div>
+              </div> */}
+              <div className="flex gap-6">
+              <LocalizationProvider dateAdapter={AdapterDayjs}>
+  <div className="flex gap-6">
+    <div>
+      <p className="mb-1">Start Date</p>
+      <DatePicker
+        value={updatedStartTrip}
+        onChange={(newDate) => handleUpdatedDateChange("tripStart", newDate)}
+        renderInput={(params) => <TextField {...params} />}
+      />
+    </div>
+
+    <div>
+      <p className="mb-1">End Date</p>
+      <DatePicker
+        value={updatedEndTrip}
+        onChange={(newDate) => handleUpdatedDateChange("tripEnd", newDate)}
+        renderInput={(params) => <TextField {...params} />}
+      />
+    </div>
+  </div>
+</LocalizationProvider>
+
+</div>
+
+
+              
               <div>
                 <h1 className="font-bold text-xl border-b mb-2 mt-3 pb-2">
                   Itinerary
