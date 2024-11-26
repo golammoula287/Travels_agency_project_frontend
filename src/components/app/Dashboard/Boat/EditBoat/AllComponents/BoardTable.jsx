@@ -3,9 +3,9 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
-import { LocalizationProvider } from "@mui/x-date-pickers-pro";
+import { LocalizationProvider,DatePicker } from "@mui/x-date-pickers-pro";
 import { AdapterDayjs } from "@mui/x-date-pickers-pro/AdapterDayjs";
-import { DateRangePicker } from "@mui/x-date-pickers-pro/DateRangePicker";
+import { DateRangePicker  } from "@mui/x-date-pickers-pro/DateRangePicker";
 import { baseUrl } from "@/src/config/serverConfig";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
@@ -325,11 +325,11 @@ const BoardTable = ({ boatData, setBoatData }) => {
             <Box sx={style}>
               <div>
                 <h1 className="font-bold text-xl border-b mb-2 pb-2">
-                  Trip Start and End Dates
+                  Trip Start and End Dates 
                 </h1>
 
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
-                  <DateRangePicker
+                  <DatePicker
                     value={[formData.tripStart, formData.tripEnd]}
                     onChange={handleDateChange}
                     renderInput={(startProps, endProps) => (
@@ -459,7 +459,7 @@ const BoardTable = ({ boatData, setBoatData }) => {
             <Box sx={style}>
               <div>
                 <h1 className="font-bold text-xl border-b mb-2 pb-2">
-                  Trip Start and End Dates
+                  Trip Start and End Dates 
                 </h1>
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
                   <DateRangePicker
@@ -467,6 +467,7 @@ const BoardTable = ({ boatData, setBoatData }) => {
                       dayjs(updateItem.tripStart),
                       dayjs(updateItem.tripEnd),
                     ]}
+                    
                     onChange={handleUpdatedDateChange}
                     renderInput={(startProps, endProps) => (
                       <>

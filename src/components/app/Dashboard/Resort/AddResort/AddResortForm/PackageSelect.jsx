@@ -75,7 +75,7 @@ export default function PackageSelect({
   return (
     <div>
       <Typography my={"10px"} fontWeight={500} fontSize={"20px"}>
-        Select available dive and stay packages
+      Select Available Dive and Stay Packages ( These are multi-select)
       </Typography>
       <FormControl sx={{ width: 300 }}>
         <InputLabel id="demo-multiple-name-label">Select Package</InputLabel>

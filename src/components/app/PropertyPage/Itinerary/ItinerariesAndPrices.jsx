@@ -861,17 +861,34 @@ function ItinerariesAndPrices({ propertyData }) {
                             <>${Number(schedule?.convertPrice).toFixed(2)}</> USD) */}
 
                         (from{" "}
-                          <span className="inline-block line-through font-semibold text-md">
-                            ${Number(schedule?.cost).toFixed(2)}USD 
+                          {/* <span className="inline-block line-through font-semibold text-md">
+                          {Number(schedule?.cost).toFixed(2)}
                           </span>
                           {"   "}
                           <span className="inline-block">
                             ${Number(schedule?.convertPrice).toFixed(2)}
                           </span>{" "}
-                          USD)
+                          USD     */}
+                          {Number(schedule?.cost).toFixed(2) === Number(schedule?.convertPrice).toFixed(2) ? (
+                            <span className="inline-block font-semibold text-md">
+                              ${Number(schedule?.cost).toFixed(2)} USD
+                            </span>
+                          ) : (
+                            <>
+                              <span className="inline-block line-through font-semibold text-md">
+                                ${Number(schedule?.cost).toFixed(2)}
+                              </span>
+                              {"   "}
+                              <span className="inline-block">
+                                ${Number(schedule?.convertPrice).toFixed(2)}
+                              </span>{" "}
+                              USD
+                            </>
+                          )}
+                                                    )
 
                         </span>
-                        <span className="text-[24px] leading-[24px] md:text-[26px] font-light pb-2  font-outfit">Offer name - {(schedule?.discount.name)}</span>
+                        <span className="text-[24px] leading-[24px] md:text-[26px] font-light pb-2  font-outfit">Discount name - {(schedule?.discount.name)}</span>
                       </div>
                       <div className="mt-4">
                         <span

@@ -189,7 +189,7 @@ const BasicInfo = ({
         <div>
           <div className="mb-4">
             <label
-              className="block mb-2 text-xl font-medium text-gray-900"
+              className="block mb-2 text-xl font-normal text-gray-900"
               for="featureImage"
             >
               Feature Image
@@ -244,7 +244,7 @@ const BasicInfo = ({
 
               {boatData?.carousal?.length > 0 && (
                 <div>
-                  <h4>Uploaded Carusel Images:</h4>
+                  <h4>Uploaded Carousel Images:</h4>
                   <div className="grid grid-cols-5 gap-x-4 space-y-4 mt-4">
                     {boatData?.carousal.map((image, index) => (
                       <div key={index} className="relative w-full h-[200px]">

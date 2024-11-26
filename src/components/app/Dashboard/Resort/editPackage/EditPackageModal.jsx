@@ -116,7 +116,7 @@ const EditPackageModal = ({
         ) : (
           <div>
             <h3 className="text-center font-semibold text-3xl">
-              Update Accommodation And Dive Package
+              Update Accommodation and Dive Package
             </h3>
             <div className="mt-10">
               <form onSubmit={handlePackageSubmit}>

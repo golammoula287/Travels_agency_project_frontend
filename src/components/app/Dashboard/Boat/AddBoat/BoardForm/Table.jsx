@@ -267,7 +267,7 @@ const BoardTable = ({
           <Box sx={style}>
             <div>
               <h1 className="font-bold text-xl border-b mb-2 pb-2">
-                Trip Start and End Dates
+                Trip Start and End Dates 
               </h1>
               {/* <LocalizationProvider dateAdapter={AdapterDayjs}>
                 <DateRangePicker

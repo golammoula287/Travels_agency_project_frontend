@@ -74,7 +74,7 @@ const AddPackage = () => {
   return (
     <div className="max-w-screen-lg mx-auto ">
       <h3 className="text-center font-semibold text-3xl">
-        Accommodation And Dive Package
+        Accommodation and Dive Package
       </h3>
       <div className="mt-10">
         <form onSubmit={handlePackageSubmit}>

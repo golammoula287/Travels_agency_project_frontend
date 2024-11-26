@@ -126,10 +126,11 @@ const Banner = () => {
         </div>
 
         <div className="sm:mt-6 mt-6  flex flex-col md:flex-row md:space-y-0 space-y-2 gap-3 justify-between md:items-center  text-white">
+          {/* Destination Field */}
           <div
             onClick={() => setIsModalOpen(true)}
             className="w-full lg:w-[50%] relative "
-          >
+           >
             <TextField
               InputProps={{
                 endAdornment: (
@@ -296,6 +297,82 @@ const Banner = () => {
             </LocalizationProvider>
           )}
 
+
+
+{/* <div
+            onClick={() => setIsModalOpen(true)}
+            className="w-full lg:w-[50%] relative "
+           >
+            <TextField
+              InputProps={{
+                endAdornment: (
+                  <InputAdornment
+                    className="absolute left-0 top-2  h-12 w-full pe-2  flex justify-end"
+                    position="start"
+                  >
+                    <ArrowDropDown className="text-white cursor-pointer " />
+                  </InputAdornment>
+                ),
+              }}
+              id="outlined-basic"
+              disabled={searchValues?.destination === ""}
+              label="Destinations"
+              value={searchValues?.destination}
+              variant="outlined"
+              fullWidth
+              className="text-white "
+              sx={{
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": {
+                    borderColor: "white", // Border color
+                    background: "transparent",
+                  },
+                  "&:hover fieldset": {
+                    borderColor: "white", // Border color on hover
+                    background: "transparent",
+                  },
+                  "&.Mui-focused fieldset": {
+                    borderColor: "white", // Border color when focused
+                    background: "transparent",
+                  },
+                  "&.Mui-disabled": {
+                    "& fieldset": {
+                      borderColor: "white", // Border color when disabled
+                    },
+                    "& .MuiOutlinedInput-input": {
+                      color: "white", // Text color when disabled
+                      backgroundColor: "transparent", // Background color when disabled
+                    },
+                  },
+                },
+                "& .MuiFormLabel-root.Mui-disabled": {
+                  color: "white",
+                },
+                "& .MuiInputBase-input": {
+                  height: "31px", // Height of the input element
+                  color: "white", // Text color
+                  backgroundColor: "transparent", // Ensure input background is transparent
+                },
+                "& .MuiInputLabel-root": {
+                  color: "white", // Label color
+                  background: "transparent",
+                  marginTop: "-4px",
+                },
+                "& .MuiInputLabel-root.Mui-focused": {
+                  color: "white", // Label color when focused
+                  background: "transparent",
+                },
+                "& .MuiInputBase-input::selection": {
+                  color: "white",
+                  marginTop: "0px",
+                  background: "transparent", // Remove background color when text is selected
+                },
+
+                width: "100%",
+              }}
+            />
+          </div> */}
+          {/* Vegan Rating*/}
           <div className="w-full lg:w-[15%]">
             <FormControl className=" " fullWidth style={{ color: "#f1f2f2" }}>
               <InputLabel

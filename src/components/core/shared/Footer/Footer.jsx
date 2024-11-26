@@ -59,7 +59,7 @@ const Footer = () => {
                 className="mt-4 mr-4 font-roboto font-normal"
                 href={"/auth"}
               >
-                Login | SignUp
+                Login | Sign Up
               </Link>
             </div>
           </div>
@@ -70,7 +70,7 @@ const Footer = () => {
                 For Agents
               </h1>
               <div className="text-gray mt-1 font-roboto font-normal">
-                Login | SignUp
+                Login | Sign Up
               </div>
             </div>
           </div>
@@ -170,14 +170,14 @@ const Footer = () => {
         </div>
         <div className=" sm:text-end text-start sm:mt-0 mt-4   ">
           <span className=" text-[14px] text-primary">
-            Developed By
+            Developed By {" "}
             <a
               href="https://ibizn.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="underline hover:text-primary"
             >
-              {" "}
+              
               IBIZN
             </a>{" "}
           </span>
