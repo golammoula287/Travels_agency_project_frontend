@@ -340,7 +340,7 @@ const FindCard = ({ searchResult, isLoading, resort }) => {
                         {searchValues?.tripStart && (
                           <div className="sm:hidden">
                             <h1 className="text-[#0080ff] text-[14px] md:text-[25px] font-outfit font-[700]">
-                              {forMonth} / {forYear}
+                              {forMonth} | {forYear}
                             </h1>
                           </div>
                         )}
