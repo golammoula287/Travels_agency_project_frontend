@@ -78,7 +78,7 @@ const ResortOrderDetails = ({ id }) => {
               </ul>
             </div>
             <div>
-              <h2 className="font-semibold capitalize">inclusions</h2>
+              <h2 className="font-semibold capitalize">Inclusions</h2>
               <ul>
                 {bookingData?.property?.inclusions?.map((item, index) => (
                   <li key={index}>{item}</li>
@@ -86,7 +86,7 @@ const ResortOrderDetails = ({ id }) => {
               </ul>
             </div>
             <div>
-              <h2 className="font-semibold capitalize">exclusions</h2>
+              <h2 className="font-semibold capitalize">Exclusions</h2>
               <ul>
                 {bookingData?.property?.exclusions?.map((item, index) => (
                   <li key={index}>{item}</li>
@@ -94,7 +94,7 @@ const ResortOrderDetails = ({ id }) => {
               </ul>
             </div>
             <div>
-              <h2 className="font-semibold capitalize">equipments</h2>
+              <h2 className="font-semibold capitalize">Equipment</h2>
               <ul>
                 {bookingData?.property?.equipment?.map((item, index) => (
                   <li key={index}>{item}</li>
@@ -102,7 +102,7 @@ const ResortOrderDetails = ({ id }) => {
               </ul>
             </div>
             <div>
-              <h2 className="font-semibold capitalize">diveCourses</h2>
+              <h2 className="font-semibold capitalize">Dive Courses</h2>
               <ul>
                 {bookingData?.property?.diveCourses?.map((item, index) => (
                   <li key={index}>{item}</li>
@@ -121,7 +121,7 @@ const ResortOrderDetails = ({ id }) => {
                     ) && (
                       <div className="my-4">
                         <h2>
-                          <strong className="mr-2">question:</strong>{" "}
+                          <strong className="mr-2">Question:</strong>{" "}
                           {item?.question}
                         </h2>
                         <p className="">
@@ -149,7 +149,7 @@ const ResortOrderDetails = ({ id }) => {
                     ) && (
                       <div className="my-4">
                         <h2>
-                          <strong className="mr-2">question:</strong>{" "}
+                          <strong className="mr-2">Question:</strong>{" "}
                           {item?.question}
                         </h2>
                         <p className="">

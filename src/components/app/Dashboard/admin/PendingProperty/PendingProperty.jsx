@@ -36,8 +36,8 @@ const PendingProperty = () => {
           indicatorColor="secondary"
           aria-label="secondary tabs example"
         >
-          <Tab value="resorts" label="Resort" />
-          <Tab value="boats" label="Boat" />
+          <Tab value="resorts" label="Resorts" />
+          <Tab value="boats" label="Boats" />
         </Tabs>
       </Box>
 

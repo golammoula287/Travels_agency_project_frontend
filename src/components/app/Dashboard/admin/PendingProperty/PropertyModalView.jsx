@@ -165,7 +165,7 @@ const PropertyModalView = ({
                 </ul>
               </div>
               <div>
-                <h2 className="font-semibold capitalize">DiveCourses</h2>
+                <h2 className="font-semibold capitalize">Dive Courses</h2>
                 <ul>
                   {resortData?.diveCourses?.map((item, index) => (
                     <li key={index}>{item}</li>

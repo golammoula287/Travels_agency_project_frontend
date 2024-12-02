@@ -197,7 +197,7 @@ const BasicInfo = ({
         {/* Add your feature image input here */}
         <div className="mb-4">
           <label
-            className="block mb-2 text-xl font-medium text-gray-900"
+            className="block mb-2 text-xl font-normal text-gray-900"
             for="featureImage"
           >
             Feature Image
@@ -216,6 +216,10 @@ const BasicInfo = ({
             <img width={120} className="mt-5" src={resortData?.featureImage} />
           )}
         </div>
+       
+
+
+        
         <div className="mb-4">
           <h2 className="my-4 text-xl pb-2 border-b-2">Carousel Images</h2>
 
