@@ -17,7 +17,7 @@ const Wifi = ({ facilities }) => {
   return (
     <div>
       <h1 className="md:text-[25px] pt-1 font-light font-outfit leading-[24px] text-[14px] text-[#0080ff]">
-        <span className="md:text-[25px] pt-1 font-light font-outfit leading-[24px] text-[14px] text-[#0080ff]">Wi-Fi:</span>{" "}
+        <span className="md:text-[25px] pt-1 font-bold sm:font-light font-outfit leading-[24px] text-[14px] text-[#0080ff]">Wi-Fi:</span>{" "}
         {hasWifi ? "Available" : "Unavailable"}
       </h1>
     </div>

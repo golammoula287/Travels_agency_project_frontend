@@ -103,9 +103,9 @@ const FindCard = ({ searchResult, isLoading, resort }) => {
             <span>
               {searchValues?.tabValue === "Resorts" ||
               searchValues?.property === "resort" ? (
-                <> We found {searchResult?.length || 0} resort(s) </>
+                <> We found {searchResult?.length || 0} resort(s) for you </>
               ) : (
-                <>We found {searchResult?.length || 0} boat(s)</>
+                <>We found {searchResult?.length || 0} boat(s) for you</>
               )}
             </span>
             {searchValues?.maxPrice && (
@@ -346,7 +346,7 @@ const FindCard = ({ searchResult, isLoading, resort }) => {
                         )}
                         <div className="sm:-mt-2  sm:mr-0 mr-6">
                           <div className="flex gap-2 items-center">
-                            <h1 className="md:text-[25px] font-light font-outfit leading-[24px] text-[14px] text-[#0080ff]">
+                            <h1 className="md:text-[25px] font-bold sm:font-light font-outfit leading-[24px] text-[14px] text-[#0080ff]">
                               Vegan Rating:
                             </h1>
                             <h1 className="md:text-[25px] pt-1 font-light font-outfit leading-[24px] text-[14px] text-[#0080ff]">
@@ -360,6 +360,13 @@ const FindCard = ({ searchResult, isLoading, resort }) => {
                             <Nitrox facilities={item?.facilities} />
                           </div>
                         </div>
+                       
+
+
+
+
+
+
                       </div>
                     </div>
                   </div>
