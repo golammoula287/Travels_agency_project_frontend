@@ -331,7 +331,7 @@ const CheckFields = ({ resortData, setResortData, handleInputChange }) => {
         </div>
 
         <div className="mb-4">
-          <h2 className="my-4 text-xl pb-2 border-b-2">Equipments</h2>
+          <h2 className="my-4 text-xl pb-2 border-b-2">Equipment</h2>
 
           {equipments?.map((equipment) => (
             <div key={equipment?._id}>
@@ -375,7 +375,7 @@ const CheckFields = ({ resortData, setResortData, handleInputChange }) => {
           )}
         </div>
         <div className="mb-4">
-          <h2 className="my-4 text-xl pb-2 border-b-2">Dive ON Course</h2>
+          <h2 className="my-4 text-xl pb-2 border-b-2">Dive Courses Available</h2>
 
           {diveCourses?.map((diveCourse) => (
             <div key={diveCourse?._id}>

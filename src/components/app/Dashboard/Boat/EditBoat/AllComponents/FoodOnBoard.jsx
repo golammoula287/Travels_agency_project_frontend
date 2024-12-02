@@ -5,7 +5,7 @@ import "react-quill/dist/quill.snow.css";
 const FoodOnBoard = ({ boatData, setBoatData, handleBoatDataChange }) => {
   return (
     <div>
-      <h1 className="text-2xl text-center font-bold">Food On Board</h1>
+      <h1 className="text-2xl text-center font-bold">Food Onboard</h1>
       <form>
         {/* <div className="mb-4">
           <label

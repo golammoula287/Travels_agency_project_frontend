@@ -31,7 +31,7 @@ const FoodAtTheResort = ({ resortData, handleResortDataChange }) => {
         </div> */}
         <div className="my-4">
                   <h4 className="block mb-2 text-xl font-normal text-gray-900">
-                  Resort Image{" "}
+                  Image of Plant-based food at Resort{" "}
                   </h4>
                   <label className="flex gap-4 w-full items-center px-4 py-2 bg-white text-blue rounded-lg border tracking-wide uppercase cursor-pointer">
                     <svg

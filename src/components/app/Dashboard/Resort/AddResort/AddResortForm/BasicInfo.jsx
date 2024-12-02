@@ -360,7 +360,7 @@ const BasicInfo = ({
 
             {caruselImages.length > 0 && (
               <div>
-                <h4>Uploaded Carusel Images:</h4>
+                <h4>Uploaded Carousel Images:</h4>
                 <ul className="grid grid-cols-5 gap-x-4 mt-4">
                   {caruselImages.map((image, index) => (
                     <li className=" w-fit relative" key={index}>

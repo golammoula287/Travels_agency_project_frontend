@@ -557,7 +557,7 @@ const BasicInfo = ({
 
   return (
     <div>
-      <h2 className="text-2xl text-center font-bold mb-4">Basic Information</h2>
+      <h2 className="text-2xl text-center font-bold mb-4">Resort Information</h2>
       <form>
         <div className="grid grid-cols-3 gap-x-2">
           <div className="mb-4">
