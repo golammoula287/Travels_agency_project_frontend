@@ -276,9 +276,9 @@ const BoardTable = ({ boatData, setBoatData }) => {
                 <th className="py-2 px-1 border-b">TRIP END DATE</th>
                 <th className="py-2 px-1 border-b">ITINERARY</th>
                 <th className="py-2 px-1 border-b">TRIP COST</th>
-                <th className="py-2 px-1 border-b">Discount </th>
-                <th className="py-2 px-1 border-b">Special </th>
-                <th className="py-2 px-1 border-b">Action </th>
+                <th className="py-2 px-1 border-b">DISCOUNT </th>
+                <th className="py-2 px-1 border-b">SPECIAL </th>
+                <th className="py-2 px-1 border-b">ACTION</th>
                 {/* Add more headers as needed */}
               </tr>
             </thead>
@@ -613,7 +613,7 @@ const BoardTable = ({ boatData, setBoatData }) => {
                       onChange={(e) => setUpdatedSpecial(e.target.checked)}
                     />
                   }
-                  label="Slide to Add This Property to Special Offers"
+                  label="Slide to Add This Property to Special Offers ( If you have a discounted period at the property, you can add this to the special offers search function here)"
                 />
               </div>
               <div className="flex gap-2">

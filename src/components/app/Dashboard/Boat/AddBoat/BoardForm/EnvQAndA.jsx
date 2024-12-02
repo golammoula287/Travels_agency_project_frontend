@@ -35,7 +35,7 @@ const EnvQAndA = ({
         <div className="mb-4">
           <label
             htmlFor="q1"
-            className="block text-sm font-medium text-gray-700"
+            className="block text-xl font-normal text-gray-700"
           >
             Which conservation organisations do you support?
           </label>
@@ -52,7 +52,7 @@ const EnvQAndA = ({
         <div className="mb-4">
           <label
             htmlFor="q2"
-            className="block text-sm font-medium text-gray-700"
+            className="block text-xl font-normal text-gray-700"
           >
             Which efforts do you take to minimise negative environmental impact?
           </label>
@@ -69,7 +69,7 @@ const EnvQAndA = ({
         <div className="mb-4">
           <label
             htmlFor="q3"
-            className="block text-sm font-medium text-gray-700"
+            className="block text-xl font-normal text-gray-700"
           >
             Which responsible diving practices are followed?
           </label>
@@ -86,7 +86,7 @@ const EnvQAndA = ({
         <div className="mb-4">
           <label
             htmlFor="q4"
-            className="block text-sm font-medium text-gray-700"
+            className="block text-xl font-normal text-gray-700"
           >
             Which sustainable practices do you follow?
           </label>
@@ -103,7 +103,7 @@ const EnvQAndA = ({
         <div className="mb-4">
           <label
             htmlFor="q5"
-            className="block text-sm font-medium text-gray-700"
+            className="block text-xl font-normal text-gray-700"
           >
             Do you make any environmental impact assessments?
           </label>
@@ -120,7 +120,7 @@ const EnvQAndA = ({
         <div className="mb-4">
           <label
             htmlFor="q6"
-            className="block text-sm font-medium text-gray-700"
+            className="block text-xl font-normal text-gray-700"
           >
             Which community initiatives are you involved in?
           </label>
@@ -137,7 +137,7 @@ const EnvQAndA = ({
         <div className="mb-4">
           <label
             htmlFor="q7"
-            className="block text-sm font-medium text-gray-700"
+            className="block text-xl font-normal text-gray-700"
           >
             Which sustainable tourism initiatives are you involved in?
           </label>
@@ -155,7 +155,7 @@ const EnvQAndA = ({
         <div className="mb-4">
           <label
             htmlFor="q8"
-            className="block text-sm font-medium text-gray-700"
+            className="block text-xl font-normal text-gray-700"
           >
             Do you have any self-authored or self-created environmental
             projects?
@@ -178,7 +178,7 @@ const EnvQAndA = ({
         <div className="mb-4">
           <label
             htmlFor="q9"
-            className="block text-sm font-medium text-gray-700"
+            className="block text-xl font-normal text-gray-700"
           >
             Do you provide plant-based meals for vegans or those on adapted
             diets?
@@ -196,7 +196,7 @@ const EnvQAndA = ({
         <div className="mb-4">
           <label
             htmlFor="q10"
-            className="block text-sm font-medium text-gray-700"
+            className="block text-xl font-normal text-gray-700"
           >
             Do you have a separate, plant-based menu?
           </label>
@@ -213,7 +213,7 @@ const EnvQAndA = ({
         <div className="mb-4">
           <label
             htmlFor="q11"
-            className="block text-sm font-medium text-gray-700"
+            className="block text-xl font-normal text-gray-700"
           >
             Can you give examples of your kitchen’s finest, plant-based dishes?
           </label>
@@ -230,7 +230,7 @@ const EnvQAndA = ({
         <div className="mb-4">
           <label
             htmlFor="q12"
-            className="block text-sm font-medium text-gray-700"
+            className="block text-xl font-normal text-gray-700"
           >
             Do you provide plant-based milk?
           </label>
@@ -247,7 +247,7 @@ const EnvQAndA = ({
         <div className="mb-4">
           <label
             htmlFor="q13"
-            className="block text-sm font-medium text-gray-700"
+            className="block text-xl font-normal text-gray-700"
           >
             For full board packages, how many days can you provide a changing or
             revolving, plant-based menu for?
@@ -265,7 +265,7 @@ const EnvQAndA = ({
         <div className="mb-4">
           <label
             htmlFor="q14"
-            className="block text-sm font-medium text-gray-700"
+            className="block text-xl font-normal text-gray-700"
           >
             Which ‘protein’ alternatives can you, or do you usually provide?
           </label>

@@ -187,7 +187,7 @@ const BasicInfo = ({
       <h1 className="text-2xl text-center font-bold">Basic Info</h1>
       <form>
         <div>
-          <div className="mb-4">
+          {/* <div className="mb-4">
             <label
               className="block mb-2 text-xl font-normal text-gray-900"
               for="featureImage"
@@ -207,11 +207,53 @@ const BasicInfo = ({
             {boatData?.featuredImage && (
               <img width={120} className="mt-5" src={boatData?.featuredImage} />
             )}
-          </div>
+          </div> */}
+<div className="my-4">
+                  <h4 className="block mb-2 text-xl font-normal text-gray-900">
+                    Feature Image{" "}
+                  </h4>
+                  <label className="flex gap-4 w-full items-center px-4 py-2 bg-white text-blue rounded-lg border tracking-wide uppercase cursor-pointer">
+                    <svg
+                      className="w-8 h-8"
+                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z" />
+                    </svg>
+                    <span className="mt-2 text-base leading-normal">
+                      {boatData?.featuredImage ? "Change Image" : "Select a file"}
+                    </span>
+                    <input
+                      type="file"
+                      className="hidden"
+                      accept=".png,.jpg"
+                      name="featureImage"
+                      required={!boatData?.featuredImage}
+                      onChange={(e) =>
+                        handleImageChanges("featuredImage", e.target.files[0])
+                      }
+                    />
+                  </label>
+                  {boatData?.featuredImage && (
+                    <img
+                      width={120}
+                      className="mt-5"
+                      src={boatData?.featuredImage}
+                      alt="Selected feature"
+                    />
+                  )}
+                </div>
+
+
+
+
+
+
           <div className="mb-4">
             <label
               htmlFor="propertyName"
-              className="block text-xl font-medium text-gray-700"
+              className="block text-xl font-normal text-gray-700"
             >
               Name of the Boat
             </label>
