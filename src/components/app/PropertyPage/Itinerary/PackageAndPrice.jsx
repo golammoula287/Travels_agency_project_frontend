@@ -570,8 +570,9 @@ function ResortAndPrice({ propertyData }) {
                         )}
                       </span>
                     </div>
-                    {/* {customDiscount && (
+                    <div>
                       <p className="text-xl text-[#09aafe] mt-2">
+                        Discount: {Number(propertyData?.discount)}% off <br />
                         Discount will be valid  from{" "}
                         {dayjs(propertyData?.discountTimeFrame?.startDate).format(
                           "DD MMM, YYYY"
@@ -581,7 +582,7 @@ function ResortAndPrice({ propertyData }) {
                           "DD MMM, YYYY"
                         )}
                       </p>
-                    )} */}
+                    </div>
                   </div>
                   <div className="flex gap-4 mt-4 md:mt-0">
                     <button
