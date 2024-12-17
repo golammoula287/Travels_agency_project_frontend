@@ -4,7 +4,8 @@ import { truncateItitanry, truncateText } from "@/utils/truncateText";
 const Itineraries = ({ schedules }) => {
   console.log(schedules);
   return (
-    <div className=" sm:pt-3 pt-[45px]">
+    <div className=" ">
+      {/*sm:pt-3 pt-[45px]*/}
       {schedules?.map((item, index) => (
         <div
           key={index}

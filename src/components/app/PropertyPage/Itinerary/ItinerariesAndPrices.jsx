@@ -885,10 +885,15 @@ function ItinerariesAndPrices({ propertyData }) {
                               USD
                             </>
                           )}
-                                                    )
-
+                            )
                         </span>
-                        <span className="text-[24px] leading-[24px] md:text-[26px] font-light pb-2  font-outfit">Discount name - {(schedule?.discount.name)}</span>
+                        {schedule?.discount.name ? (
+                          <span className="text-[24px] leading-[24px] md:text-[26px] font-light pb-2 font-outfit">
+                             Discounted - name of discount - {schedule.discount.name}
+                          </span>
+                        ) : null}
+
+                       
                       </div>
                       <div className="mt-4">
                         <span

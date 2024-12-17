@@ -396,8 +396,8 @@ const BasicInfo = ({
           </div>
         </div>
         <div className="my-4">
-          <h2 className="mt-10 mb-4 text-2xl font-normal ">Period of Closure ( Please enter the date range for any period the property is closed)
-          </h2>
+          <h4 className="mt-10 mb-4 text-xl font-normal ">Period of Closure  ( Please enter the date range for any period the property is closed)
+          </h4>
 
           {/* <LocalizationProvider dateAdapter={AdapterDayjs}>
             <DateRangePicker
@@ -462,7 +462,7 @@ const BasicInfo = ({
           />
         </div>
         <div className="mb-4">
-          <h2 className="my-4 text-2xl font-normal"> Discount(Enter any percentage discount amount that will apply to packages) </h2>
+          <h2 className="my-4 text-xl font-normal"> Discount (Enter any percentage discount amount that will apply to packages) </h2>
 
           <label
             htmlFor="propertyName"
@@ -498,7 +498,7 @@ const BasicInfo = ({
             </LocalizationProvider>
           </div> */}
           <div>
-            <h2 className="mt-10 mb-4 text-2xl font-normal ">Discount Time Frame ( The time frame that above discount will be applied to)
+            <h2 className="mt-10 mb-4 text-xl font-normal ">Discount Time Frame ( The time frame that above discount will be applied to)
             </h2>
             <div className="flex gap-6">
               <LocalizationProvider dateAdapter={AdapterDayjs}>

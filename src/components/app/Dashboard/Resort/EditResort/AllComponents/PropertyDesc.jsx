@@ -7,7 +7,8 @@ const PropertyDesc = ({ resortData, handleImageChanges, setResortData }) => {
   return (
     <div>
       <h2 className="text-2xl text-center font-bold">
-        Brief description of the Resort
+        {/*Brief Description of the Resort */}
+        Resort
       </h2>
       <form>
         <div className="mb-4">
@@ -15,7 +16,7 @@ const PropertyDesc = ({ resortData, handleImageChanges, setResortData }) => {
             className="block text-gray-700 text-xl  mb-2"
             htmlFor="propertyDesc"
           >
-            Brief description
+            Resort Description
           </label>
           {/* <textarea
             onChange={(e) =>
@@ -45,8 +46,8 @@ const PropertyDesc = ({ resortData, handleImageChanges, setResortData }) => {
                 briefDescription: value,
               })
             }
-            className="shadow appearance-none border  w-full py-2 px-3 rounded-md text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            style={{ minHeight: "8rem" }}
+            className="shadow appearance-none border   w-full py-2 px-3 rounded-md text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            style={{ minHeight: "12rem" }}
           />
         </div>
         {/* <div className="mb-4">

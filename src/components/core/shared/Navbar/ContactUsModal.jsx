@@ -22,8 +22,8 @@ const ContactUsModal = ({ isModalOpen, setIsModalOpen }) => {
     const name = e.target.name.value;
     const email = e.target.email.value;
     const message = e.target.message.value;
-
-    const body = { name, email, message };
+    const contact = e.target.contact.value;
+    const body = { name, email, message,contact };
     console.log(body);
     fetch(`${baseUrl}/send-email/contact-us`, {
       method: "POST",
@@ -34,7 +34,7 @@ const ContactUsModal = ({ isModalOpen, setIsModalOpen }) => {
       .then((data) => {
         if (data?.success) {
           setIsLoading(false);
-          toast.success("Successfully send your message");
+          toast.success("Your message has been sent successfully");
           setIsModalOpen(false);
         } else {
           setIsLoading(false);
@@ -98,9 +98,9 @@ const ContactUsModal = ({ isModalOpen, setIsModalOpen }) => {
 "
                       required
                       className="border border-slate-800 rounded-md px-2"
-                      name="message"
-                      label="Message"
-                      id="message"
+                      name="contact"
+                      label="contact"
+                      id="contact"
                       type="text"
                       rows={2}
                     />

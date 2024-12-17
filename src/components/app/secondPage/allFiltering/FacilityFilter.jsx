@@ -18,7 +18,7 @@ const MenuProps = {
   PaperProps: {
     style: {
       maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
-      width: 250,
+      width: 550,
     },
   },
 };
@@ -123,7 +123,8 @@ const FacilityFilter = () => {
           }}
         >
           {names.map((name) => (
-            <MenuItem key={name} value={name}>
+            <MenuItem
+             key={name} value={name}>
               <Checkbox checked={facility.indexOf(name) > -1} />
               <Tooltip title={name}>
                 <ListItemText primary={truncateText(name)} />

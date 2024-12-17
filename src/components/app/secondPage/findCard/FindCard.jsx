@@ -862,7 +862,7 @@ const FindCard = ({ searchResult, isLoading, resort,propertyData,tabValue }) => 
                             <>
                               {readMore ? (
                                 <div
-                                  className="sm:text-[18px] text-[16px] sm:font-light font-regular font-roboto leading-[20px]"
+                                  className="sm:text-[14px] text-[14px] sm:font-light font-regular font-roboto leading-[20px]"
                                   dangerouslySetInnerHTML={{
                                     __html: item?.briefDescription,
                                   }}
@@ -870,7 +870,7 @@ const FindCard = ({ searchResult, isLoading, resort,propertyData,tabValue }) => 
                               ) : (
                                 <>
                                   <div
-                                    className="sm:text-[18px] text-[16px] sm:font-light font-regular font-roboto leading-[20px]"
+                                    className="sm:text-[14px] text-[16px] sm:font-light font-regular font-roboto leading-[20px]"
                                     dangerouslySetInnerHTML={{
                                       __html: truncateDescription(
                                         item?.briefDescription
@@ -885,7 +885,7 @@ const FindCard = ({ searchResult, isLoading, resort,propertyData,tabValue }) => 
                             <>
                               {readMore ? (
                                 <div
-                                  className="sm:text-[18px] text-[16px] font-light font-roboto leading-[20px]"
+                                  className="sm:text-[14px] text-[14px] font-light font-roboto leading-[20px]"
                                   dangerouslySetInnerHTML={{
                                     __html: DOMPurify.sanitize(
                                       item?.briefDescription
@@ -894,7 +894,7 @@ const FindCard = ({ searchResult, isLoading, resort,propertyData,tabValue }) => 
                                 />
                               ) : (
                                 <p
-                                  className="sm:text-[18px] text-[16px] font-light font-roboto leading-[20px]"
+                                  className="sm:text-[14px] text-[14px] font-light font-roboto leading-[20px]"
                                   dangerouslySetInnerHTML={{
                                     __html: DOMPurify.sanitize(
                                       truncateDescription(
@@ -909,9 +909,9 @@ const FindCard = ({ searchResult, isLoading, resort,propertyData,tabValue }) => 
                         </p>
                       </div>
                       {/*Updated text and discount */}
-                      <div className="sm:text-[18px] text-[16px] font-light font-roboto leading-[20px]">
-                                  {searchValues?.tabValue !== "Boats" &&
-                            searchValues?.property !== "boat" && (
+                      <div className="sm:text-[14px] text-[14px] font-light font-roboto leading-[20px]">
+                                  {searchValues?.tabValue !== "Boats" && searchValues?.property !== "boat" && searchValues?.tabValue !=="Resorts" && searchValues?.tabValue !== "Liveaboards" &&
+                    searchValues?.property !== "liveaboards" &&   (
                               <p >
                                 Discount: {Number(item?.discount)}% Off <br />
                                 Discount will be valid  from{" "}

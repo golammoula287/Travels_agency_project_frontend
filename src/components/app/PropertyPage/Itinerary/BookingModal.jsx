@@ -80,7 +80,7 @@ const BookingModal = ({
       .then((data) => {
         if (data?.success) {
           setLoading(false);
-          toast.success("Booking successful");
+          toast.success("Booking request successful");
           setOpen(false);
         } else {
           toast.error("Something went wrong");

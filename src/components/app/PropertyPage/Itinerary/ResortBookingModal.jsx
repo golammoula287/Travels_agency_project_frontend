@@ -108,7 +108,7 @@ const ResortBookingModal = ({ open, setOpen, propertyData, packages }) => {
       .then((res) => res.json())
       .then((data) => {
         if (data?.success) {
-          toast.success("Booking successful");
+          toast.success("Booking request successful");
           setOpen(false);
           setLoading(false);
         } else {

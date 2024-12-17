@@ -282,7 +282,7 @@ const AddBoat = () => {
           Swal.fire({
             position: "top-center",
             icon: "success",
-            title: "Your boat added successfully",
+            title: "Your Boat Has Been Successfully Added",
             showConfirmButton: false,
             timer: 1500,
           });

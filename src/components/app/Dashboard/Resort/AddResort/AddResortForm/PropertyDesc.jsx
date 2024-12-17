@@ -110,7 +110,7 @@ const PropertyDesc = ({
             className="block text-gray-700 text-xl  mb-2"
             htmlFor="propertyDesc"
           >
-           Brief Description of the Resort
+           Brief Description of the Resort 
           </label>
 
           <ReactQuill

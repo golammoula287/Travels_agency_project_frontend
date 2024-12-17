@@ -68,7 +68,7 @@ const Accommodation = ({
         {/*Updated With Remove Button */}
                   <div className="my-4">
             <h4 className="block mb-2 text-xl font-normal text-gray-900">
-              Room Image{" "}
+            Accommodation Image{" "}
               <span className="font-normal">
                 (Please upload 2:3 ratio images; otherwise, they will be automatically cropped)
               </span>

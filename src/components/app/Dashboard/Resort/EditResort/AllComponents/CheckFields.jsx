@@ -227,7 +227,7 @@ const CheckFields = ({ resortData, setResortData, handleInputChange }) => {
             resortData?.special && resortData?.special === true ? true : false
           }
           control={<Switch onChange={(e) => handleInputChange(e)} />}
-          label="Slide to Add This Property to Special Offers ( If you have a discounted period at the property, you can add this to the special offers search function here)"
+          label="Slide to Add This Property to 'Special Offers' ( If you have a discounted period at the property, you can add this to the special offers search function here)"
         />
 
         <h2 className="my-4 text-xl pb-2 border-b-2">Facilities</h2>

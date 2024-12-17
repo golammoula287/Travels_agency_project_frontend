@@ -88,7 +88,7 @@ function Liveaboards({ propertyData }) {
                 onClick={() => router.push("/search")}
                 className="text-white  -mt-2 sm:mt-0     "
               >
-                <buttons className="underline font-[200]  md:py-8 py-2 cursor-pointer text-nowrap">
+                <buttons className="underline  py-2 cursor-pointer text-nowrap md:text-[22px] text-lg font-light font-roboto">
                   Back to Results
                 </buttons>
               </div>
