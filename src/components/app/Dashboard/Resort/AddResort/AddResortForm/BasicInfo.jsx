@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { useDropzone } from "react-dropzone";
 import { compressAndConvertToBase64 } from "@/src/config/base64";
 import { DatePicker, LocalizationProvider } from "@mui/x-date-pickers";
+import { DateRangePicker } from "@mui/x-date-pickers-pro";
 import { AdapterDayjs } from "@mui/x-date-pickers-pro/AdapterDayjs";
 import { userContext } from "@/src/storage/contextApi";
 import { Close } from "@mui/icons-material";
@@ -399,7 +400,7 @@ const BasicInfo = ({
           <h4 className="mt-10 mb-4 text-xl font-normal ">Period of Closure  ( Please enter the date range for any period the property is closed)
           </h4>
 
-          {/* <LocalizationProvider dateAdapter={AdapterDayjs}>
+          <LocalizationProvider dateAdapter={AdapterDayjs}>
             <DateRangePicker
               defaultValue={[
                 deactivitionDate?.startDate || "",
@@ -414,8 +415,8 @@ const BasicInfo = ({
                 </>
               )}
             />
-          </LocalizationProvider> */}
-          <div className="flex gap-6">
+          </LocalizationProvider>
+          {/* <div className="flex gap-6">
             <LocalizationProvider dateAdapter={AdapterDayjs}>
               <div>
                 <p className="mb-1 text-xl font-normal ">Start Date</p>
@@ -442,7 +443,7 @@ const BasicInfo = ({
                 />
               </div>
             </LocalizationProvider>
-          </div>
+          </div> */}
         </div>
         <div className="mb-4">
           <label
@@ -479,7 +480,9 @@ const BasicInfo = ({
             onChange={(e) => handleInputChange(e)}
           />
 
-          {/* <div className="my-4">
+          <div className="my-4">
+          <h2 className="mt-10 mb-4 text-xl font-normal ">Discount Time Frame ( The time frame that above discount will be applied to)
+          </h2>
             <LocalizationProvider dateAdapter={AdapterDayjs}>
               <DateRangePicker
                 defaultValue={[
@@ -496,8 +499,8 @@ const BasicInfo = ({
                 )}
               />
             </LocalizationProvider>
-          </div> */}
-          <div>
+          </div>
+          {/* <div>
             <h2 className="mt-10 mb-4 text-xl font-normal ">Discount Time Frame ( The time frame that above discount will be applied to)
             </h2>
             <div className="flex gap-6">
@@ -528,7 +531,7 @@ const BasicInfo = ({
                 </div>
               </LocalizationProvider>
             </div>
-          </div>
+          </div> */}
           <div className="mt-6">
             <p className="text-xl font-normal ">Resort Daily Schedule</p>
             <ReactQuill

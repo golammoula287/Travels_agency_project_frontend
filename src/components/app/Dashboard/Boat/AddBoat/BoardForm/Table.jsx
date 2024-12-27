@@ -269,7 +269,7 @@ const BoardTable = ({
               <h1 className="font-bold text-xl border-b mb-2 pb-2">
                 Trip Start and End Dates 
               </h1>
-              {/* <LocalizationProvider dateAdapter={AdapterDayjs}>
+              <LocalizationProvider dateAdapter={AdapterDayjs}>
                 <DateRangePicker
                   value={[formData.tripStart, formData.tripEnd]}
                   onChange={handleDateChange}
@@ -281,8 +281,9 @@ const BoardTable = ({
                     </>
                   )}
                 />
-              </LocalizationProvider> */}
-              <div className="flex gap-6">
+              </LocalizationProvider>
+              
+              {/* <div className="flex gap-6">
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
                   <div>
                     <p className="mb-1">Start Date</p>
@@ -309,7 +310,7 @@ const BoardTable = ({
                     />
                   </div>
                 </LocalizationProvider>
-              </div>
+              </div> */}
             </div>
             <div>
               <h1 className="font-bold text-xl border-b mb-2 mt-3 pb-2">

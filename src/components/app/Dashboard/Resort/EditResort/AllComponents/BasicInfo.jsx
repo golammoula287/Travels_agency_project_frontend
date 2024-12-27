@@ -507,47 +507,47 @@ const BasicInfo = ({
     });
   };
 
-  // const handleDeactivationPeriodChange = (newValue) => {
-  //   setResortData({
-  //     ...resortData,
-  //     deactivationPeriod: {
-  //       startDate: newValue[0],
-  //       endDate: newValue[1],
-  //     },
-  //   });
-  // };
+  const handleDeactivationPeriodChange = (newValue) => {
+    setResortData({
+      ...resortData,
+      deactivationPeriod: {
+        startDate: newValue[0],
+        endDate: newValue[1],
+      },
+    });
+  };
   
-    const handleDeactivationDateChange = (field, newValue) => {
-      setResortData((prevData) => ({
-        ...prevData,
-        deactivationPeriod: {
-          ...prevData.deactivationPeriod,
-          [field]: newValue ? dayjs(newValue).toISOString() : null, // Ensure proper format
-        },
-      }));
-    };
+    // const handleDeactivationDateChange = (field, newValue) => {
+    //   setResortData((prevData) => ({
+    //     ...prevData,
+    //     deactivationPeriod: {
+    //       ...prevData.deactivationPeriod,
+    //       [field]: newValue ? dayjs(newValue).toISOString() : null, // Ensure proper format
+    //     },
+    //   }));
+    // };
     
 
   
-  // const handleDiscountTimeFrame = (newValue) => {
-  //   setResortData({
-  //     ...resortData,
-  //     discountTimeFrame: {
-  //       startDate: newValue[0],
-  //       endDate: newValue[1],
-  //     },
-  //   });
-  // };
-
-  const handleDiscountDateChange = (field, newValue) => {
-    setResortData((prevData) => ({
-      ...prevData,
+  const handleDiscountTimeFrame = (newValue) => {
+    setResortData({
+      ...resortData,
       discountTimeFrame: {
-        ...prevData.discountTimeFrame,
-        [field]: newValue ? dayjs(newValue).toISOString() : null, // Ensure proper date format
+        startDate: newValue[0],
+        endDate: newValue[1],
       },
-    }));
+    });
   };
+
+  // const handleDiscountDateChange = (field, newValue) => {
+  //   setResortData((prevData) => ({
+  //     ...prevData,
+  //     discountTimeFrame: {
+  //       ...prevData.discountTimeFrame,
+  //       [field]: newValue ? dayjs(newValue).toISOString() : null, // Ensure proper date format
+  //     },
+  //   }));
+  // };
 
   // if (!resortData) {
   //   return <div>Loading</div>;
@@ -754,7 +754,7 @@ const BasicInfo = ({
             )}
           </div>
         </div>
-        {/* <div className="mb-4">
+        <div className="mb-4">
           <h2 className="my-4 text-xl">Period of Closure</h2>
 
           <LocalizationProvider dateAdapter={AdapterDayjs}>
@@ -774,15 +774,15 @@ const BasicInfo = ({
             />
           </LocalizationProvider>
 
-         </div> */}
+         </div>
 
 
-<div className="mb-4">
+{/* <div className="mb-4">
       <h2 className="my-4 text-xl">Period of Closure</h2>
 
       <LocalizationProvider dateAdapter={AdapterDayjs}>
         <div className="flex gap-6">
-          {/* Start Date Picker */}
+         
           <div>
             <p className="mb-1 text-lg font-normal">Start Date</p>
             <DatePicker
@@ -792,7 +792,7 @@ const BasicInfo = ({
             />
           </div>
 
-          {/* End Date Picker */}
+          
           <div>
             <p className="mb-1 text-lg font-normal">End Date</p>
             <DatePicker
@@ -803,7 +803,7 @@ const BasicInfo = ({
           </div>
         </div>
       </LocalizationProvider>
-    </div>
+    </div> */}
   
 
 
@@ -854,7 +854,7 @@ const BasicInfo = ({
             // onChange={(e) => handleInputChange(e)}
           />
 
-          {/* <div className="my-4">
+          <div className="my-4">
             <LocalizationProvider dateAdapter={AdapterDayjs}>
               <DateRangePicker
                 defaultValue={[
@@ -871,14 +871,14 @@ const BasicInfo = ({
                 )}
               />
             </LocalizationProvider>
-          </div> */}
+          </div>
 
-<div className="my-4">
+{/* <div className="my-5 ">
       <h2 className="my-4 text-xl">Discount Time Frame</h2>
 
       <LocalizationProvider dateAdapter={AdapterDayjs}>
         <div className="flex gap-6">
-          {/* Start Date Picker */}
+         
           <div>
             <p className="mb-1 text-lg font-normal">Start Date</p>
             <DatePicker
@@ -888,7 +888,7 @@ const BasicInfo = ({
             />
           </div>
 
-          {/* End Date Picker */}
+        
           <div>
             <p className="mb-1 text-lg font-normal">End Date</p>
             <DatePicker
@@ -899,7 +899,7 @@ const BasicInfo = ({
           </div>
         </div>
       </LocalizationProvider>
-    </div>
+    </div> */}
         </div>
       </form>
     </div>
