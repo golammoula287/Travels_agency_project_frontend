@@ -209,10 +209,10 @@ const BoardTable = ({
             {itineraryData.map((items, index) => (
               <tr key={index} className={index % 2 === 0 ? "bg-gray-100" : ""}>
                 <td className="py-2 text-center border-b">
-                  {dayjs(items?.tripStart).format("MMMM D, YYYY")}
+                  {dayjs(items?.tripStart).format("DD/MM/YYYY")}
                 </td>
                 <td className="py-2 text-center border-b">
-                  {dayjs(items?.tripEnd).format("MMMM D, YYYY")}
+                  {dayjs(items?.tripEnd).format("DD/MM/YYYY")}
                 </td>
                 <td className="py-2 text-center border-b">
                   {

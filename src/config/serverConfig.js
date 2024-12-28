@@ -3,4 +3,4 @@
 //export const baseUrl = "https://travel-backend-api-xi.vercel.app/api";
 
 // local
-export const baseUrl = "http://localhost:5000/api";
+export const baseUrl = "https://travel-backend-gules.vercel.app/api";

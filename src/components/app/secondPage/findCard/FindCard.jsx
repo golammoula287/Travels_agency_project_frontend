@@ -974,10 +974,17 @@ const FindCard = ({ searchResult, isLoading, resort,propertyData,tabValue }) => 
               ))}
             </div>
           ) : (
+            // <Alert variant="filled" severity="info">
+            //   There are no properties for these dates, Please search another
+            //   date.
+            // </Alert>
             <Alert variant="filled" severity="info">
-              There are no properties for these dates, Please search another
-              date.
-            </Alert>
+      {searchValues?.tabValue === "resorts" || searchValues?.tabValue === "Liveaboards"
+        ? "There are no properties for these dates, Please search another date."
+        : searchValues?.tabValue === "Special Offers"
+        ? "There are no properties for these destinations, Please search another destinations."
+        : "No properties found. Please refine your search."}
+    </Alert>
           )}
         </div>
         {/* from here code develope by hosaindev */}
