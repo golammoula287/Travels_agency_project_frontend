@@ -17,6 +17,11 @@ import CheckIcon from "@mui/icons-material/Check";
 import CloseIcon from "@mui/icons-material/Close";
 import { DeleteOutline, EditNoteOutlined } from "@mui/icons-material";
 import { LicenseInfo } from '@mui/x-license-pro';
+import 'dayjs/locale/en-gb'; // Import a locale that uses DDMMYYYY format
+
+// Configure dayjs to use the desired locale if necessary
+dayjs.locale('en-gb');
+
 
 // Register the license key
 LicenseInfo.setLicenseKey('ca4012114b243bf70ca149ccbb3693efTz0xMDQ3MjcsRT0xNzY2NDM3NDg3MDAwLFM9cHJvLExNPXN1YnNjcmlwdGlvbixQVj1RMy0yMDI0LEtWPTI=');
@@ -274,15 +279,17 @@ const BoardTable = ({
               <h1 className="font-bold text-xl border-b mb-2 pb-2">
                 Trip Start and End Dates 
               </h1>
-              <LocalizationProvider dateAdapter={AdapterDayjs}>
+              <LocalizationProvider dateAdapter={AdapterDayjs}
+              adapterLocale="en-gb" // Specify locale for DDMMYYYY
+              >
                 <DateRangePicker
                   value={[formData.tripStart, formData.tripEnd]}
                   onChange={handleDateChange}
                   renderInput={(startProps, endProps) => (
                     <>
-                      <TextField {...startProps} />
+                      <TextField {...startProps}placeholder="DD/MM/YYYY"/>
                       <Box sx={{ mx: 2 }}> to </Box>
-                      <TextField {...endProps} />
+                      <TextField {...endProps}placeholder="DD/MM/YYYY"/>
                     </>
                   )}
                 />
