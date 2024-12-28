@@ -16,6 +16,11 @@ import dayjs from "dayjs";
 import CheckIcon from "@mui/icons-material/Check";
 import CloseIcon from "@mui/icons-material/Close";
 import { DeleteOutline, EditNoteOutlined } from "@mui/icons-material";
+import { LicenseInfo } from '@mui/x-license-pro';
+
+// Register the license key
+LicenseInfo.setLicenseKey('ca4012114b243bf70ca149ccbb3693efTz0xMDQ3MjcsRT0xNzY2NDM3NDg3MDAwLFM9cHJvLExNPXN1YnNjcmlwdGlvbixQVj1RMy0yMDI0LEtWPTI=');
+
 const initialState = {
   tripStart: null,
   tripEnd: null,

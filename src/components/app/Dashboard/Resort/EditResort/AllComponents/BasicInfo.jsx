@@ -429,6 +429,11 @@ import React, { useContext, useEffect, useState } from "react";
 import { DateRangePicker } from "@mui/x-date-pickers-pro";
 import { AdapterDayjs } from "@mui/x-date-pickers-pro/AdapterDayjs";
 import { userContext } from "@/src/storage/contextApi";
+import { LicenseInfo } from '@mui/x-license-pro';
+
+// Register the license key
+LicenseInfo.setLicenseKey('ca4012114b243bf70ca149ccbb3693efTz0xMDQ3MjcsRT0xNzY2NDM3NDg3MDAwLFM9cHJvLExNPXN1YnNjcmlwdGlvbixQVj1RMy0yMDI0LEtWPTI=');
+
 import Swal from "sweetalert2";
 import {
   FormControl,
