@@ -889,7 +889,7 @@ function ItinerariesAndPrices({ propertyData }) {
                         </span>
                         {schedule?.discount.name ? (
                           <span className="text-[24px] leading-[24px] md:text-[26px] font-light pb-2 font-outfit">
-                             Discounted - name of discount - {schedule.discount.name}
+                             Discounted - {schedule.discount.name}
                           </span>
                         ) : null}
 
