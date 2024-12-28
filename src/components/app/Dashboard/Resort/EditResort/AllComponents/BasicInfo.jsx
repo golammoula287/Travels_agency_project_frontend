@@ -430,6 +430,10 @@ import { DateRangePicker } from "@mui/x-date-pickers-pro";
 import { AdapterDayjs } from "@mui/x-date-pickers-pro/AdapterDayjs";
 import { userContext } from "@/src/storage/contextApi";
 import { LicenseInfo } from '@mui/x-license-pro';
+import 'dayjs/locale/en-gb'; // Import a locale that uses DDMMYYYY format
+
+// Configure dayjs to use the desired locale if necessary
+dayjs.locale('en-gb');
 
 // Register the license key
 LicenseInfo.setLicenseKey('ca4012114b243bf70ca149ccbb3693efTz0xMDQ3MjcsRT0xNzY2NDM3NDg3MDAwLFM9cHJvLExNPXN1YnNjcmlwdGlvbixQVj1RMy0yMDI0LEtWPTI=');
@@ -762,7 +766,9 @@ const BasicInfo = ({
         <div className="mb-4">
           <h2 className="my-4 text-xl">Period of Closure</h2>
 
-          <LocalizationProvider dateAdapter={AdapterDayjs}>
+          <LocalizationProvider dateAdapter={AdapterDayjs}
+          adapterLocale="en-gb" // Specify locale for DDMMYYYY
+          >
             <DateRangePicker
               value={[
                 dayjs(resortData?.deactivationPeriod?.startDate),
@@ -771,13 +777,35 @@ const BasicInfo = ({
               onChange={handleDeactivationPeriodChange}
               renderInput={(startProps, endProps) => (
                 <>
-                  <TextField {...startProps} />
+                  <TextField {...startProps}placeholder="DD/MM/YYYY" />
                   <Box sx={{ mx: 2 }}> to </Box>
-                  <TextField {...endProps} />
+                  <TextField {...endProps}placeholder="DD/MM/YYYY" />
                 </>
               )}
             />
           </LocalizationProvider>
+          {/* <LocalizationProvider
+  dateAdapter={AdapterDayjs}
+  adapterLocale="en-gb" // Specify locale for DDMMYYYY
+>
+  <DateRangePicker
+    value={[
+      dayjs(resortData?.deactivationPeriod?.startDate),
+      dayjs(resortData?.deactivationPeriod?.endDate),
+    ]}
+    onChange={handleDeactivationPeriodChange}
+    renderInput={(startProps, endProps) => (
+      <>
+        <TextField
+          {...startProps}placeholder='DDMMYYYY'/>
+        <Box sx={{ mx: 2 }}> to </Box>
+        <TextField
+          {...endProps} placeholder= 'DDMMYYYY'/>
+      </>
+    )}
+  />
+</LocalizationProvider> */}
+
 
          </div>
 
@@ -840,7 +868,7 @@ const BasicInfo = ({
 
           <label
             htmlFor="propertyName"
-            className="block text-md font-normal text-gray-700"
+            className="block text-xl font-normal text-gray-700"
           >
             Percentage
           </label>
@@ -858,9 +886,12 @@ const BasicInfo = ({
             }
             // onChange={(e) => handleInputChange(e)}
           />
-
+          
           <div className="my-4">
-            <LocalizationProvider dateAdapter={AdapterDayjs}>
+          <h2 className="my-4 text-xl">Discount Time Frame</h2>
+            <LocalizationProvider dateAdapter={AdapterDayjs}
+            adapterLocale="en-gb" // Specify locale for DDMMYYYY
+            >
               <DateRangePicker
                 defaultValue={[
                   dayjs(resortData?.discountTimeFrame?.startDate),
@@ -869,9 +900,9 @@ const BasicInfo = ({
                 onChange={handleDiscountTimeFrame}
                 renderInput={(startProps, endProps) => (
                   <>
-                    <TextField {...startProps} />
+                    <TextField {...startProps}placeholder="DD/MM/YYYY" />
                     <Box sx={{ mx: 2 }}> to </Box>
-                    <TextField {...endProps} />
+                    <TextField {...endProps}placeholder="DD/MM/YYYY" />
                   </>
                 )}
               />

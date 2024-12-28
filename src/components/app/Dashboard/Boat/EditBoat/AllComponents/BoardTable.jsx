@@ -662,6 +662,10 @@ import { LocalizationProvider} from "@mui/x-date-pickers-pro";
 import { AdapterDayjs } from "@mui/x-date-pickers-pro/AdapterDayjs";
 import { DateRangePicker } from "@mui/x-date-pickers-pro/DateRangePicker";
 import { LicenseInfo } from '@mui/x-license-pro';
+import 'dayjs/locale/en-gb'; // Import a locale that uses DDMMYYYY format
+
+// Configure dayjs to use the desired locale if necessary
+dayjs.locale('en-gb');
 
 // Register the license key
 LicenseInfo.setLicenseKey('ca4012114b243bf70ca149ccbb3693efTz0xMDQ3MjcsRT0xNzY2NDM3NDg3MDAwLFM9cHJvLExNPXN1YnNjcmlwdGlvbixQVj1RMy0yMDI0LEtWPTI=');
@@ -992,10 +996,10 @@ const BoardTable = ({ boatData, setBoatData }) => {
             <Box sx={style}>
               <div>
                 <h1 className="font-bold text-xl border-b mb-2 pb-2">
-                  Trip Start and End Dates 
+                  Trip Start and End Dates
                 </h1>
 
-                <LocalizationProvider dateAdapter={AdapterDayjs}>
+                {/* <LocalizationProvider dateAdapter={AdapterDayjs}>
                   <DateRangePicker
                     value={[formData.tripStart, formData.tripEnd]}
                     onChange={handleDateChange}
@@ -1007,7 +1011,24 @@ const BoardTable = ({ boatData, setBoatData }) => {
                       </>
                     )}
                   />
-                </LocalizationProvider>
+                </LocalizationProvider> */}
+                <LocalizationProvider
+  dateAdapter={AdapterDayjs}
+  adapterLocale="en-gb" // Specify locale for DDMMYYYY
+>
+  <DateRangePicker
+    value={[formData.tripStart, formData.tripEnd]}
+    onChange={handleDateChange}
+    renderInput={(startProps, endProps) => (
+      <>
+        <TextField {...startProps} placeholder="DDMMYYYY" />
+        <Box sx={{ mx: 2 }}> to </Box>
+        <TextField {...endProps} placeholder="DDMMYYYY" />
+      </>
+    )}
+  />
+</LocalizationProvider>
+                
 
 
                 {/* <LocalizationProvider dateAdapter={AdapterDayjs}>
@@ -1181,7 +1202,7 @@ const BoardTable = ({ boatData, setBoatData }) => {
             <Box sx={style}>
               <div>
                 <h1 className="font-bold text-xl border-b mb-2 pb-2">
-                  Trip Start and End Dates
+                  Trip Start and End Dates 
                 </h1>
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
                   <DateRangePicker

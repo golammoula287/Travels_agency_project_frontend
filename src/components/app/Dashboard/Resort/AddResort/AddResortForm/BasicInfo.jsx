@@ -8,8 +8,14 @@ import { AdapterDayjs } from "@mui/x-date-pickers-pro/AdapterDayjs";
 import { userContext } from "@/src/storage/contextApi";
 import { Close } from "@mui/icons-material";
 import dynamic from "next/dynamic";
+import dayjs from 'dayjs';
+import Box from "@mui/material/Box";
 
 import { LicenseInfo } from '@mui/x-license-pro';
+import 'dayjs/locale/en-gb'; // Import a locale that uses DDMMYYYY format
+
+// Configure dayjs to use the desired locale if necessary
+dayjs.locale('en-gb');
 
 // Register the license key
 LicenseInfo.setLicenseKey('ca4012114b243bf70ca149ccbb3693efTz0xMDQ3MjcsRT0xNzY2NDM3NDg3MDAwLFM9cHJvLExNPXN1YnNjcmlwdGlvbixQVj1RMy0yMDI0LEtWPTI=');
@@ -23,6 +29,7 @@ import {
   MenuItem,
   Select,
   TextField,
+  Typography,
 } from "@mui/material";
 import Swal from "sweetalert2";
 const BasicInfo = ({
@@ -406,7 +413,9 @@ const BasicInfo = ({
           <h4 className="mt-10 mb-4 text-xl font-normal ">Period of Closure  ( Please enter the date range for any period the property is closed)
           </h4>
 
-          <LocalizationProvider dateAdapter={AdapterDayjs}>
+          <LocalizationProvider dateAdapter={AdapterDayjs}
+          adapterLocale="en-gb" // Specify locale for DDMMYYYY
+          >
             <DateRangePicker
               defaultValue={[
                 deactivitionDate?.startDate || "",
@@ -415,41 +424,14 @@ const BasicInfo = ({
               onChange={handleDeactivitionChange}
               renderInput={(startProps, endProps) => (
                 <>
-                  <TextField {...startProps} />
+                  <TextField {...startProps}placeholder="DD/MM/YYYY" />
                   <Box sx={{ mx: 2 }}> to </Box>
-                  <TextField {...endProps} />
+                  <TextField {...endProps}placeholder="DD/MM/YYYY" />
                 </>
               )}
             />
           </LocalizationProvider>
-          {/* <div className="flex gap-6">
-            <LocalizationProvider dateAdapter={AdapterDayjs}>
-              <div>
-                <p className="mb-1 text-xl font-normal ">Start Date</p>
-                <DatePicker
-                  value={deactivitionDate.startDate}
-                  onChange={(newDate) =>
-                    setDeactivitionDate({
-                      ...deactivitionDate,
-                      startDate: newDate,
-                    })
-                  }
-                />
-              </div>
-              <div>
-                <p className="mb-1 text-xl font-normal ">End Date</p>
-                <DatePicker
-                  value={deactivitionDate.endDate}
-                  onChange={(newDate) =>
-                    setDeactivitionDate({
-                      ...deactivitionDate,
-                      endDate: newDate,
-                    })
-                  }
-                />
-              </div>
-            </LocalizationProvider>
-          </div> */}
+        
         </div>
         <div className="mb-4">
           <label
@@ -489,7 +471,9 @@ const BasicInfo = ({
           <div className="my-4">
           <h2 className="mt-10 mb-4 text-xl font-normal ">Discount Time Frame ( The time frame that above discount will be applied to)
           </h2>
-            <LocalizationProvider dateAdapter={AdapterDayjs}>
+            <LocalizationProvider dateAdapter={AdapterDayjs}
+            adapterLocale="en-gb" // Specify locale for DDMMYYYY
+            >
               <DateRangePicker
                 defaultValue={[
                   discountTimeFrameDate?.startDate || "",
@@ -498,9 +482,9 @@ const BasicInfo = ({
                 onChange={handleDiscountTimeFrame}
                 renderInput={(startProps, endProps) => (
                   <>
-                    <TextField {...startProps} />
+                    <TextField {...startProps}placeholder="DD/MM/YYYY" />
                     <Box sx={{ mx: 2 }}> to </Box>
-                    <TextField {...endProps} />
+                    <TextField {...endProps}placeholder="DD/MM/YYYY" />
                   </>
                 )}
               />
