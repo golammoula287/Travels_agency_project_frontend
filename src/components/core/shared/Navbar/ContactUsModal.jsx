@@ -21,8 +21,8 @@ const ContactUsModal = ({ isModalOpen, setIsModalOpen }) => {
     // Accessing form field values
     const name = e.target.name.value;
     const email = e.target.email.value;
-    const message = e.target.message.value;
-    const contact = e.target.contact.value;
+    const message = e.target.message.value ;
+    const contact = e.target.contact.value ;
     const body = { name, email, message,contact };
     console.log(body);
     fetch(`${baseUrl}/send-email/contact-us`, {
@@ -96,7 +96,7 @@ const ContactUsModal = ({ isModalOpen, setIsModalOpen }) => {
                     <textarea
                       placeholder="Please enter another contact method
 "
-                      required
+                      
                       className="border border-slate-800 rounded-md px-2"
                       name="contact"
                       label="contact"
@@ -114,7 +114,7 @@ const ContactUsModal = ({ isModalOpen, setIsModalOpen }) => {
                     <textarea
                       placeholder="Please type your message
 "
-                      required
+                      
                       className="border border-slate-800 rounded-md px-2"
                       name="message"
                       label="Message"
