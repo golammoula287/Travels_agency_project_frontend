@@ -1204,7 +1204,9 @@ const BoardTable = ({ boatData, setBoatData }) => {
                 <h1 className="font-bold text-xl border-b mb-2 pb-2">
                   Trip Start and End Dates 
                 </h1>
-                <LocalizationProvider dateAdapter={AdapterDayjs}>
+                <LocalizationProvider dateAdapter={AdapterDayjs}
+                adapterLocale="en-gb" // Specify locale for DDMMYYYY
+                >
                   <DateRangePicker
                     value={[
                       dayjs(updateItem.tripStart),
@@ -1214,9 +1216,9 @@ const BoardTable = ({ boatData, setBoatData }) => {
                     onChange={handleUpdatedDateChange}
                     renderInput={(startProps, endProps) => (
                       <>
-                        <TextField {...startProps} />
+                        <TextField {...startProps} placeholder="DD/MM/YYYY" />
                         <Box sx={{ mx: 2 }}> to </Box>
-                        <TextField {...endProps} />
+                        <TextField {...endProps} placeholder="DD/MM/YYYY" />
                       </>
                     )}
                   />
