@@ -209,7 +209,7 @@ function SliderModal({
             </div>
           </div>
         
-<div className="swiper-container" style={{ position: 'absolute', bottom: 25, left: 0, right: 0 }}>
+<div className="swiper-container" style={{ position: 'absolute', bottom: 30, left: 0, right: 0 }}>
   <Swiper
     navigation={true}
     modules={[Navigation]}
