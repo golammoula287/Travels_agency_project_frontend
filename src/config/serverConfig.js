@@ -3,4 +3,4 @@
 //export const baseUrl = "https://travel-backend-api-xi.vercel.app/api";
 
 // local
-export const baseUrl = "http://82.180.163.183:5001/api";
+export const baseUrl = "https://backend.deeparture.travel/api";
